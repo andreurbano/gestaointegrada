@@ -1,0 +1,108 @@
+inherited frmCadResiduo: TfrmCadResiduo
+  Left = 351
+  Top = 185
+  Caption = 'Cadastro de Res'#237'duos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    inherited pgcManutencaoBD: TPageControl
+      ActivePage = tbsCadastro
+      inherited tbsCadastro: TTabSheet
+        inherited Panel1: TPanel
+          Width = 509
+          Height = 262
+          object Label1: TLabel
+            Left = 63
+            Top = 51
+            Width = 58
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = DBEdit1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label2: TLabel
+            Left = 63
+            Top = 93
+            Width = 101
+            Height = 13
+            Caption = 'Valor de Mercado'
+            FocusControl = DBEdit2
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object DBEdit1: TDBEdit
+            Left = 63
+            Top = 67
+            Width = 200
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+          object chkContaminado: TDBCheckBox
+            Left = 63
+            Top = 136
+            Width = 97
+            Height = 17
+            Caption = 'Contaminado'
+            DataField = 'FlagContaminado'
+            DataSource = dtsManuBD
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 2
+            ValueChecked = 'True'
+            ValueUnchecked = 'False'
+          end
+          object DBEdit2: TDBEdit
+            Left = 63
+            Top = 109
+            Width = 199
+            Height = 21
+            DataField = 'ValorMercado'
+            DataSource = dtsManuBD
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDID_Residuo: TIntegerField
+      DisplayLabel = 'ID. Res'#237'duo'
+      FieldName = 'ID_Residuo'
+      Required = True
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'Descricao'
+      Required = True
+      Size = 50
+    end
+    object cdsManuBDFlagContaminado: TStringField
+      FieldName = 'FlagContaminado'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsManuBDValorMercado: TBCDField
+      DisplayLabel = 'Valor de Mercado'
+      FieldName = 'ValorMercado'
+      DisplayFormat = '###,##0.00'
+      Precision = 14
+      Size = 2
+    end
+  end
+end

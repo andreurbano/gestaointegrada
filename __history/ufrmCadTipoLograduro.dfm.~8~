@@ -1,0 +1,84 @@
+inherited frmCadTipoLograduro: TfrmCadTipoLograduro
+  Left = 294
+  Top = 280
+  Caption = 'Cadastro de Tipos de Logradouro'
+  ClientWidth = 403
+  ExplicitWidth = 411
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    Width = 314
+    inherited pgcManutencaoBD: TPageControl
+      Width = 294
+      inherited tbsListagem: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited pnlListagem: TPanel
+          Width = 286
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          inherited dbgManutencaoBD: TDBGridUrb
+            Width = 284
+          end
+        end
+      end
+      inherited tbsCadastro: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited Panel1: TPanel
+          Width = 286
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          object lblDescricao: TLabel
+            Left = 34
+            Top = 111
+            Width = 48
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = txtDescricao
+          end
+          object txtDescricao: TDBEdit
+            Left = 34
+            Top = 127
+            Width = 200
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  inherited stbManutencaoBD: TStatusBar
+    Width = 403
+  end
+  inherited pnlBotoes: TPanel
+    Left = 325
+    ExplicitLeft = 546
+    ExplicitHeight = 288
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    Active = True
+    object cdsManuBDID_Tipo: TIntegerField
+      DisplayLabel = 'Id.'
+      FieldName = 'ID_Tipo'
+      Required = True
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'Descricao'
+      Required = True
+      FixedChar = True
+      Size = 30
+    end
+  end
+  inherited sqlManuBD: TSQLDataSet
+    SchemaName = 'andre'
+    CommandText = 'select ID_Tipo, Descricao from logradourotipo order by Descricao'
+  end
+end

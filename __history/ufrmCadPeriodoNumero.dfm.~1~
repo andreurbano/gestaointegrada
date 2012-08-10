@@ -1,0 +1,146 @@
+inherited frmCadPeriodoNumero: TfrmCadPeriodoNumero
+  Left = 535
+  Top = 219
+  Caption = 'Cadastro d Per'#237'odos dos N'#250'meros de Manifesto'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    inherited pgcManutencaoBD: TPageControl
+      ActivePage = tbsCadastro
+      inherited tbsCadastro: TTabSheet
+        inherited Panel1: TPanel
+          Width = 509
+          Height = 262
+          object Label1: TLabel
+            Left = 48
+            Top = 16
+            Width = 49
+            Height = 13
+            Caption = 'Empresa'
+            FocusControl = DBLookupComboBox1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label2: TLabel
+            Left = 48
+            Top = 58
+            Width = 34
+            Height = 13
+            Caption = 'In'#237'cio'
+            FocusControl = DBEdit1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label3: TLabel
+            Left = 48
+            Top = 98
+            Width = 20
+            Height = 13
+            Caption = 'Fim'
+            FocusControl = DBEdit2
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object DBLookupComboBox1: TDBLookupComboBox
+            Left = 48
+            Top = 32
+            Width = 249
+            Height = 21
+            DataField = 'DescEmpresa'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+          object DBEdit1: TDBEdit
+            Left = 48
+            Top = 74
+            Width = 134
+            Height = 21
+            DataField = 'Inicio'
+            DataSource = dtsManuBD
+            TabOrder = 1
+          end
+          object DBEdit2: TDBEdit
+            Left = 48
+            Top = 114
+            Width = 134
+            Height = 21
+            DataField = 'Fim'
+            DataSource = dtsManuBD
+            TabOrder = 2
+          end
+        end
+      end
+    end
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDInicio: TIntegerField
+      DisplayLabel = 'In'#237'cio'
+      FieldName = 'Inicio'
+      Required = True
+    end
+    object cdsManuBDFim: TIntegerField
+      FieldName = 'Fim'
+      Required = True
+    end
+    object cdsManuBDDescEmpresa: TStringField
+      DisplayLabel = 'Empresa'
+      FieldKind = fkLookup
+      FieldName = 'DescEmpresa'
+      LookupDataSet = cdsEmpresa
+      LookupKeyFields = 'ID_Empresa'
+      LookupResultField = 'RazaoSocial'
+      KeyFields = 'ID_Empresa'
+      Size = 40
+      Lookup = True
+    end
+    object cdsManuBDID_PeriodoNumero: TIntegerField
+      DisplayLabel = 'ID. Per. N'#186
+      FieldName = 'ID_PeriodoNumero'
+      Required = True
+      Visible = False
+    end
+    object cdsManuBDID_Empresa: TIntegerField
+      DisplayLabel = 'ID. Empresa'
+      FieldName = 'ID_Empresa'
+      Required = True
+      Visible = False
+    end
+    object cdsManuBDCompleto: TStringField
+      FieldName = 'Completo'
+      Visible = False
+    end
+  end
+  object cdsEmpresa: TClientDataSetUrb
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspEmpresa'
+    Left = 250
+    Top = 30
+  end
+  object sqlEmpresa: TSQLDataSet
+    GetMetadata = False
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = frmPrincipal.ConexaoBD
+    Left = 194
+    Top = 31
+  end
+  object dspEmpresa: TDataSetProviderUrb
+    DataSet = sqlEmpresa
+    Options = [poAllowCommandText]
+    Left = 222
+    Top = 31
+  end
+end

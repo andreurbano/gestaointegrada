@@ -1,0 +1,55 @@
+inherited frmCadNomeFantasia: TfrmCadNomeFantasia
+  Left = 447
+  Top = 257
+  Caption = 'Cadastro de Nome Fantasia'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    inherited pgcManutencaoBD: TPageControl
+      ActivePage = tbsCadastro
+      inherited tbsCadastro: TTabSheet
+        inherited Panel1: TPanel
+          Width = 509
+          Height = 262
+          object Label1: TLabel
+            Left = 37
+            Top = 83
+            Width = 58
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = DBEdit1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object DBEdit1: TDBEdit
+            Left = 37
+            Top = 99
+            Width = 250
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDID_Fantasia: TIntegerField
+      DisplayLabel = 'ID. Fantasia'
+      FieldName = 'ID_Fantasia'
+      Required = True
+      DisplayFormat = '000000'
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'Descricao'
+      Required = True
+      Size = 30
+    end
+  end
+end

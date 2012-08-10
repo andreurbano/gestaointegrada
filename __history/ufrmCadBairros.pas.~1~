@@ -1,0 +1,38 @@
+unit ufrmCadBairros;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, UFRMMANUTENCAOBD, Menus, DB, DataSourceUrb, DBClient,
+  ClientDataSetUrb, ImgList, DBClientActns, DBActns, ActnList, Buttons,
+  ComCtrls, Grids, DBGrids, DBGridUrb, ExtCtrls, StdCtrls, Mask, DBCtrls;
+
+type
+  TfrmCadBairros = class(TfrmManutencaoBD)
+    cdsManuBDID_Bairro: TIntegerField;
+    cdsManuBDDescricao: TStringField;
+    lblDescricao: TLabel;
+    txtDescricao: TDBEdit;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadBairros: TfrmCadBairros;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadBairros.FormCreate(Sender: TObject);
+begin
+  inherited;
+  sTabelaNome  := 'bairro';
+  sCampoIDNome := 'ID_Bairro';
+end;
+
+end.

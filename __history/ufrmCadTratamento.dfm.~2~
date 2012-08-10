@@ -1,0 +1,111 @@
+inherited frmCadTratamento: TfrmCadTratamento
+  Caption = 'Cadastro de Tratamentos'
+  ClientWidth = 493
+  ExplicitWidth = 501
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    Width = 404
+    inherited pgcManutencaoBD: TPageControl
+      Width = 384
+      ActivePage = tbsCadastro
+      inherited tbsListagem: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited pnlListagem: TPanel
+          Width = 376
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          inherited dbgManutencaoBD: TDBGridUrb
+            Width = 374
+          end
+        end
+      end
+      inherited tbsCadastro: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited Panel1: TPanel
+          Width = 376
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          object Label1: TLabel
+            Left = 88
+            Top = 91
+            Width = 58
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = DBEdit1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label2: TLabel
+            Left = 88
+            Top = 131
+            Width = 29
+            Height = 13
+            Caption = 'Sigla'
+            FocusControl = DBEdit2
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object DBEdit1: TDBEdit
+            Left = 88
+            Top = 107
+            Width = 200
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+          object DBEdit2: TDBEdit
+            Left = 88
+            Top = 147
+            Width = 69
+            Height = 21
+            DataField = 'Sigla'
+            DataSource = dtsManuBD
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+  inherited stbManutencaoBD: TStatusBar
+    Width = 493
+  end
+  inherited pnlBotoes: TPanel
+    Left = 415
+    ExplicitLeft = 546
+    ExplicitHeight = 288
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDID_Tratamento: TIntegerField
+      DisplayLabel = 'ID. Tratamento'
+      FieldName = 'ID_Tratamento'
+      Required = True
+      DisplayFormat = '000000'
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'Descricao'
+      Required = True
+      Size = 30
+    end
+    object cdsManuBDSigla: TStringField
+      FieldName = 'Sigla'
+      Size = 5
+    end
+  end
+end

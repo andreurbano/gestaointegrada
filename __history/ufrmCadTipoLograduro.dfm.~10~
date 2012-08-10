@@ -1,0 +1,94 @@
+inherited frmCadTipoLograduro: TfrmCadTipoLograduro
+  Left = 294
+  Top = 280
+  Caption = 'Cadastro de Tipos de Logradouro'
+  ClientHeight = 268
+  ClientWidth = 403
+  ExplicitWidth = 411
+  ExplicitHeight = 295
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    Width = 314
+    Height = 234
+    inherited pgcManutencaoBD: TPageControl
+      Width = 294
+      Height = 216
+      ActivePage = tbsCadastro
+      inherited tbsListagem: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited pnlListagem: TPanel
+          Width = 286
+          Height = 206
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          inherited dbgManutencaoBD: TDBGridUrb
+            Width = 284
+            Height = 204
+          end
+        end
+      end
+      inherited tbsCadastro: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited Panel1: TPanel
+          Width = 286
+          Height = 206
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          object lblDescricao: TLabel
+            Left = 43
+            Top = 85
+            Width = 48
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = txtDescricao
+          end
+          object txtDescricao: TDBEdit
+            Left = 43
+            Top = 101
+            Width = 200
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  inherited stbManutencaoBD: TStatusBar
+    Top = 249
+    Width = 403
+  end
+  inherited pnlBotoes: TPanel
+    Left = 325
+    Height = 234
+    ExplicitLeft = 546
+    ExplicitHeight = 288
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    Active = True
+    object cdsManuBDID_Tipo: TIntegerField
+      DisplayLabel = 'Id.'
+      FieldName = 'ID_Tipo'
+      Required = True
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'Descricao'
+      Required = True
+      FixedChar = True
+      Size = 30
+    end
+  end
+  inherited sqlManuBD: TSQLDataSet
+    SchemaName = 'andre'
+    CommandText = 'select ID_Tipo, Descricao from logradourotipo order by Descricao'
+  end
+end

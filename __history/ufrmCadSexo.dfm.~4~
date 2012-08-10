@@ -1,0 +1,102 @@
+inherited frmCadSexo: TfrmCadSexo
+  Left = 260
+  Top = 206
+  Caption = 'Cadastro de Sexos'
+  ClientHeight = 267
+  ClientWidth = 380
+  ExplicitWidth = 388
+  ExplicitHeight = 294
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    Width = 291
+    Height = 233
+    inherited pgcManutencaoBD: TPageControl
+      Width = 271
+      Height = 215
+      inherited tbsListagem: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 334
+        ExplicitHeight = 260
+        inherited pnlListagem: TPanel
+          Width = 263
+          Height = 205
+          ExplicitWidth = 334
+          ExplicitHeight = 260
+          inherited dbgManutencaoBD: TDBGridUrb
+            Width = 261
+            Height = 203
+          end
+        end
+      end
+      inherited tbsCadastro: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited Panel1: TPanel
+          Width = 263
+          Height = 205
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+          object lblDescricao: TLabel
+            Left = 32
+            Top = 84
+            Width = 58
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = txtDescricao
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object txtDescricao: TDBEdit
+            Left = 32
+            Top = 100
+            Width = 200
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  inherited stbManutencaoBD: TStatusBar
+    Top = 248
+    Width = 380
+  end
+  inherited pnlBotoes: TPanel
+    Left = 302
+    Height = 233
+    ExplicitLeft = 546
+    ExplicitHeight = 288
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    Active = True
+    object cdsManuBDID_Sexo: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'Id.'
+      DisplayWidth = 8
+      FieldName = 'ID_Sexo'
+      Required = True
+      DisplayFormat = '000000'
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      DisplayWidth = 36
+      FieldName = 'Descricao'
+      Required = True
+      Size = 30
+    end
+  end
+  inherited sqlManuBD: TSQLDataSet
+    SchemaName = 'andre'
+    CommandText = 'select ID_Sexo, Descricao from sexo order by Descricao'
+  end
+end

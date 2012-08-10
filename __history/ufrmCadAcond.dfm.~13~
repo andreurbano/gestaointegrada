@@ -1,0 +1,115 @@
+inherited frmCadAcond: TfrmCadAcond
+  Caption = 'Cadastro de Acondicionamento'
+  ClientHeight = 257
+  ClientWidth = 425
+  ExplicitWidth = 433
+  ExplicitHeight = 291
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    Width = 336
+    Height = 230
+    ExplicitWidth = 535
+    ExplicitHeight = 230
+    inherited pgcManutencaoBD: TPageControl
+      Width = 316
+      Height = 212
+      ExplicitWidth = 515
+      ExplicitHeight = 212
+      inherited tbsListagem: TTabSheet
+        ExplicitWidth = 507
+        ExplicitHeight = 202
+        inherited pnlListagem: TPanel
+          Width = 308
+          Height = 202
+          ExplicitWidth = 507
+          ExplicitHeight = 202
+          inherited dbgManutencaoBD: TDBGridUrb
+            Width = 306
+            Height = 200
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'ID_Acondicionamento'
+                Title.Alignment = taCenter
+                Width = 45
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Descricao'
+                Visible = True
+              end>
+          end
+        end
+      end
+      inherited tbsCadastro: TTabSheet
+        ExplicitWidth = 507
+        ExplicitHeight = 202
+        inherited Panel1: TPanel
+          Width = 308
+          Height = 202
+          ExplicitWidth = 507
+          ExplicitHeight = 202
+          object lblDescricao: TLabel
+            Left = 54
+            Top = 83
+            Width = 48
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = txtDescricao
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            ParentFont = False
+          end
+          object txtDescricao: TDBEdit
+            Left = 54
+            Top = 99
+            Width = 200
+            Height = 21
+            Anchors = [akLeft, akTop, akRight]
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  inherited stbManutencaoBD: TStatusBar
+    Top = 238
+    Width = 425
+    ExplicitTop = 238
+  end
+  inherited pnlBotoes: TPanel
+    Left = 347
+    Height = 230
+    ExplicitLeft = 546
+    ExplicitHeight = 230
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDID_Acondicionamento: TIntegerField
+      Alignment = taCenter
+      DisplayLabel = 'Id.'
+      FieldName = 'ID_Acondicionamento'
+      Required = True
+      DisplayFormat = '000000'
+      EditFormat = '000000'
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      DisplayWidth = 37
+      FieldName = 'Descricao'
+      Required = True
+      Size = 30
+    end
+  end
+  inherited sqlManuBD: TSQLDataSet
+    CommandText = 
+      'select ID_Acondicionamento, Descricao from acondicionamento orde' +
+      'r by Descricao'
+  end
+end

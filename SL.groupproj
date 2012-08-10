@@ -1,0 +1,34 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7eba21a7-0934-4072-a9c7-62c1f3fb9418}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="gestaointegrada.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="gestaointegrada">
+    <MSBuild Projects="gestaointegrada.dproj" Targets="" />
+  </Target>
+  <Target Name="gestaointegrada:Clean">
+    <MSBuild Projects="gestaointegrada.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="gestaointegrada:Make">
+    <MSBuild Projects="gestaointegrada.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="gestaointegrada" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="gestaointegrada:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="gestaointegrada:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>

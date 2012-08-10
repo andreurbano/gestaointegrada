@@ -1,0 +1,56 @@
+inherited frmCadSexo: TfrmCadSexo
+  Left = 260
+  Top = 206
+  Caption = 'Cadastro de Sexos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    inherited pgcManutencaoBD: TPageControl
+      ActivePage = tbsCadastro
+      inherited tbsCadastro: TTabSheet
+        inherited Panel1: TPanel
+          Width = 509
+          Height = 262
+          object lblDescricao: TLabel
+            Left = 64
+            Top = 84
+            Width = 58
+            Height = 13
+            Caption = 'Descri'#231#227'o'
+            FocusControl = txtDescricao
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object txtDescricao: TDBEdit
+            Left = 64
+            Top = 100
+            Width = 200
+            Height = 21
+            DataField = 'Descricao'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDID_Sexo: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'ID. Sexo'
+      FieldName = 'ID_Sexo'
+      Required = True
+      DisplayFormat = '000000'
+    end
+    object cdsManuBDDescricao: TStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'Descricao'
+      Required = True
+      Size = 30
+    end
+  end
+end

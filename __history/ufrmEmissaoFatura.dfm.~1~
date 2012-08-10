@@ -1,0 +1,574 @@
+inherited frmEmissaoFatura: TfrmEmissaoFatura
+  Left = 166
+  Top = 80
+  Width = 465
+  Height = 455
+  Caption = 'Emiss'#227'o de Faturas'
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnVisializar: TSpeedButton
+    Left = 354
+    Top = 389
+    Width = 95
+    Height = 25
+    Caption = '&Visualizar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = btnVisializarClick
+  end
+  object gbxEmissao: TGroupBox
+    Left = 8
+    Top = 5
+    Width = 441
+    Height = 62
+    Caption = 'Emiss'#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object lblDtEmissao: TLabel
+      Left = 50
+      Top = 14
+      Width = 78
+      Height = 13
+      Caption = 'Data Emiss'#227'o'
+    end
+    object Label1: TLabel
+      Left = 145
+      Top = 14
+      Width = 103
+      Height = 13
+      Caption = 'Empresa Emissora'
+    end
+    object dtpDtEmissao: TDateTimePicker
+      Left = 50
+      Top = 30
+      Width = 85
+      Height = 21
+      Date = 38989.639939409720000000
+      Time = 38989.639939409720000000
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object ComboBox1: TComboBox
+      Left = 377
+      Top = 14
+      Width = 274
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ItemHeight = 13
+      ItemIndex = 0
+      ParentFont = False
+      TabOrder = 1
+      Text = 'Ferpan Maca'#233
+      Items.Strings = (
+        'Ferpan Maca'#233
+        'Ferpan Rio de Janeiro')
+    end
+    object dbEmpresaEmissora: TDBLookupComboBox
+      Left = 145
+      Top = 30
+      Width = 290
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      KeyField = 'ID_Empresa'
+      ListField = 'RazaoSocial'
+      ListSource = dtsEmpresaEmissora
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object gbxDuplicata: TGroupBox
+    Left = 8
+    Top = 135
+    Width = 441
+    Height = 106
+    Caption = 'Duplicata'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    object Label2: TLabel
+      Left = 50
+      Top = 14
+      Width = 55
+      Height = 13
+      Caption = 'Fatura N'#186
+    end
+    object Label3: TLabel
+      Left = 145
+      Top = 14
+      Width = 70
+      Height = 13
+      Caption = 'Fatura Valor'
+    end
+    object Label4: TLabel
+      Left = 240
+      Top = 14
+      Width = 73
+      Height = 13
+      Caption = 'N'#186' de Ordem'
+    end
+    object Label5: TLabel
+      Left = 335
+      Top = 14
+      Width = 67
+      Height = 13
+      Caption = 'Vencimento'
+    end
+    object Label6: TLabel
+      Left = 50
+      Top = 58
+      Width = 40
+      Height = 13
+      Caption = 'Cliente'
+    end
+    object txtDupFatNum: TEdit
+      Left = 50
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object txtDupNumOrdem: TEdit
+      Left = 240
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object txtDupFatValor: TMaskEdit
+      Left = 145
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object dblDupCliente: TDBLookupComboBox
+      Left = 50
+      Top = 74
+      Width = 370
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      KeyField = 'ID_Empresa'
+      ListField = 'RazaoSocial'
+      ListSource = dtsGerEmpresa
+      ParentFont = False
+      TabOrder = 4
+    end
+    object txtDtVencimento: TEdit
+      Left = 335
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object gbxNotaFiscal: TGroupBox
+    Left = 8
+    Top = 70
+    Width = 441
+    Height = 62
+    Caption = 'Nota Fiscal'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    object Label7: TLabel
+      Left = 50
+      Top = 14
+      Width = 44
+      Height = 13
+      Caption = 'N'#250'mero'
+    end
+    object Label8: TLabel
+      Left = 145
+      Top = 14
+      Width = 30
+      Height = 13
+      Caption = 'Valor'
+    end
+    object txtNFNum: TEdit
+      Left = 50
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnExit = txtDupFatNumExit
+    end
+    object txtNFValor: TMaskEdit
+      Left = 145
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      OnExit = txtNFValorExit
+    end
+    object chkColocar_S: TCheckBox
+      Left = 236
+      Top = 34
+      Width = 195
+      Height = 17
+      Caption = 'Colocar a Letra "S" na Duplicata'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+      OnClick = chkColocar_SClick
+    end
+  end
+  object gbxObs: TGroupBox
+    Left = 8
+    Top = 244
+    Width = 441
+    Height = 71
+    Caption = 'Obs'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object gbxOutros: TGroupBox
+    Left = 8
+    Top = 319
+    Width = 441
+    Height = 62
+    Caption = 'Outros'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    object Label9: TLabel
+      Left = 50
+      Top = 14
+      Width = 108
+      Height = 13
+      Caption = 'P'#231'a do Pagamento'
+    end
+    object txtPracaPg: TEdit
+      Left = 50
+      Top = 30
+      Width = 85
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Text = 'Acima'
+      OnExit = txtDupFatNumExit
+    end
+  end
+  object cdsGerEmpresa: TClientDataSetUrb
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspGerEmpresa'
+    Left = 130
+    Top = 190
+    object cdsGerEmpresaID_Empresa: TIntegerField
+      FieldName = 'ID_Empresa'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object cdsGerEmpresaRazaoSocial: TStringField
+      FieldName = 'RazaoSocial'
+      Required = True
+      Size = 50
+    end
+    object cdsGerEmpresaID_Classificacao: TIntegerField
+      FieldName = 'ID_Classificacao'
+      Required = True
+    end
+    object cdsGerEmpresaEndereco: TStringField
+      FieldName = 'Endereco'
+      Required = True
+      Size = 80
+    end
+    object cdsGerEmpresaMunicipio: TStringField
+      FieldName = 'Municipio'
+      Required = True
+      Size = 30
+    end
+    object cdsGerEmpresaUF: TStringField
+      FieldName = 'UF'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+    object cdsGerEmpresaTelefone: TStringField
+      FieldName = 'Telefone'
+      Size = 15
+    end
+    object cdsGerEmpresaNumLicencaFEEMA: TStringField
+      FieldName = 'NumLicencaFEEMA'
+      Size = 30
+    end
+    object cdsGerEmpresaValorContrato: TBCDField
+      FieldName = 'ValorContrato'
+      Precision = 14
+      Size = 2
+    end
+    object cdsGerEmpresaValorTonelada: TBCDField
+      FieldName = 'ValorTonelada'
+      Precision = 14
+      Size = 2
+    end
+    object cdsGerEmpresaFlagRelContaminado: TStringField
+      FieldName = 'FlagRelContaminado'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsGerEmpresaFlagRelReciclavel: TStringField
+      FieldName = 'FlagRelReciclavel'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsGerEmpresaFlagRelSucata: TStringField
+      FieldName = 'FlagRelSucata'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsGerEmpresaTipoResumoGeral: TIntegerField
+      FieldName = 'TipoResumoGeral'
+      Required = True
+    end
+    object cdsGerEmpresaResponsavel: TStringField
+      DisplayLabel = 'Respons'#225'vel'
+      FieldName = 'Responsavel'
+      Size = 50
+    end
+    object cdsGerEmpresaCEP: TStringField
+      FieldName = 'CEP'
+      Size = 8
+    end
+    object cdsGerEmpresaCNPJ: TStringField
+      FieldName = 'CNPJ'
+      Size = 15
+    end
+    object cdsGerEmpresaInscEstado: TStringField
+      FieldName = 'InscEstado'
+      Size = 9
+    end
+  end
+  object dtsGerEmpresa: TDataSourceUrb
+    AutoEdit = False
+    DataSet = cdsGerEmpresa
+    Left = 158
+    Top = 190
+  end
+  object sqlGerEmpresa: TSQLDataSet
+    GetMetadata = False
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = frmPrincipal.ConexaoBD
+    Left = 66
+    Top = 189
+  end
+  object dspGerEmpresa: TDataSetProvider
+    DataSet = sqlGerEmpresa
+    Left = 98
+    Top = 189
+  end
+  object sqlEmpresaEmissora: TSQLDataSet
+    GetMetadata = False
+    CommandText = 
+      'select ID_Empresa, concat(RazaoSocial, '#39' - '#39', Municipio) AS Raza' +
+      'oSocial, ID_Classificacao, Endereco, Municipio, UF, Telefone,  N' +
+      'umLicencaFEEMA, ValorContrato, ValorTonelada, FlagRelContaminado' +
+      ', FlagRelReciclavel,  FlagRelSucata, TipoResumoGeral, Responsave' +
+      'l, ID_Fantasia, CEP, CNPJ, InscEstado, Obs  from empresa where  ' +
+      'RazaoSocial like '#39'Ferpan%'#39' order by RazaoSocial '
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = frmPrincipal.ConexaoBD
+    Left = 151
+    Top = 58
+  end
+  object dspEmpresaEmissora: TDataSetProvider
+    DataSet = sqlEmpresaEmissora
+    Left = 183
+    Top = 58
+  end
+  object cdsEmpresaEmissora: TClientDataSetUrb
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspEmpresaEmissora'
+    Left = 215
+    Top = 59
+    object cdsEmpresaEmissoraID_Empresa: TIntegerField
+      FieldName = 'ID_Empresa'
+      Required = True
+    end
+    object cdsEmpresaEmissoraRazaoSocial: TStringField
+      FieldName = 'RazaoSocial'
+      Size = 83
+    end
+    object cdsEmpresaEmissoraID_Classificacao: TIntegerField
+      FieldName = 'ID_Classificacao'
+      Required = True
+    end
+    object cdsEmpresaEmissoraEndereco: TStringField
+      FieldName = 'Endereco'
+      Required = True
+      Size = 80
+    end
+    object cdsEmpresaEmissoraMunicipio: TStringField
+      FieldName = 'Municipio'
+      Required = True
+      Size = 30
+    end
+    object cdsEmpresaEmissoraUF: TStringField
+      FieldName = 'UF'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+    object cdsEmpresaEmissoraTelefone: TStringField
+      FieldName = 'Telefone'
+      Size = 15
+    end
+    object cdsEmpresaEmissoraNumLicencaFEEMA: TStringField
+      FieldName = 'NumLicencaFEEMA'
+      Size = 30
+    end
+    object cdsEmpresaEmissoraValorContrato: TBCDField
+      FieldName = 'ValorContrato'
+      Precision = 14
+      Size = 2
+    end
+    object cdsEmpresaEmissoraValorTonelada: TBCDField
+      FieldName = 'ValorTonelada'
+      Precision = 14
+      Size = 2
+    end
+    object cdsEmpresaEmissoraFlagRelContaminado: TStringField
+      FieldName = 'FlagRelContaminado'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsEmpresaEmissoraFlagRelReciclavel: TStringField
+      FieldName = 'FlagRelReciclavel'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsEmpresaEmissoraFlagRelSucata: TStringField
+      FieldName = 'FlagRelSucata'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsEmpresaEmissoraTipoResumoGeral: TIntegerField
+      FieldName = 'TipoResumoGeral'
+      Required = True
+    end
+    object cdsEmpresaEmissoraResponsavel: TStringField
+      FieldName = 'Responsavel'
+      Size = 50
+    end
+    object cdsEmpresaEmissoraID_Fantasia: TIntegerField
+      FieldName = 'ID_Fantasia'
+      Required = True
+    end
+    object cdsEmpresaEmissoraCEP: TStringField
+      FieldName = 'CEP'
+      Size = 8
+    end
+    object cdsEmpresaEmissoraCNPJ: TStringField
+      FieldName = 'CNPJ'
+      Size = 15
+    end
+    object cdsEmpresaEmissoraInscEstado: TStringField
+      FieldName = 'InscEstado'
+      Size = 9
+    end
+    object cdsEmpresaEmissoraObs: TBlobField
+      FieldName = 'Obs'
+      Size = 1
+    end
+  end
+  object dtsEmpresaEmissora: TDataSourceUrb
+    AutoEdit = False
+    DataSet = cdsEmpresaEmissora
+    Left = 243
+    Top = 59
+  end
+end

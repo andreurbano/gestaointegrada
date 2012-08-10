@@ -1,0 +1,216 @@
+inherited frmCadResponsavel: TfrmCadResponsavel
+  Left = 369
+  Top = 165
+  Caption = 'Cadastro de Respons'#225'veis'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    inherited pgcManutencaoBD: TPageControl
+      ActivePage = tbsCadastro
+      inherited tbsCadastro: TTabSheet
+        inherited Panel1: TPanel
+          Width = 509
+          Height = 262
+          object Label1: TLabel
+            Left = 106
+            Top = 64
+            Width = 33
+            Height = 13
+            Caption = 'Nome'
+            FocusControl = DBEdit1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label2: TLabel
+            Left = 22
+            Top = 104
+            Width = 34
+            Height = 13
+            Caption = 'Cargo'
+            FocusControl = DBLookupComboBox1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object btnCadCargo: TSpeedButton
+            Left = 200
+            Top = 120
+            Width = 21
+            Height = 21
+            Hint = 'Cadastro de Cargo'
+            Caption = '...'
+            Flat = True
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = btnCadCargoClick
+          end
+          object btnCadTratamento: TSpeedButton
+            Left = 80
+            Top = 80
+            Width = 21
+            Height = 21
+            Hint = 'Cadastro de Tratamento'
+            Caption = '...'
+            Flat = True
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = btnCadTratamentoClick
+          end
+          object Label3: TLabel
+            Left = 22
+            Top = 64
+            Width = 28
+            Height = 13
+            Caption = 'Trat.'
+            FocusControl = DBLookupComboBox2
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object DBEdit1: TDBEdit
+            Left = 106
+            Top = 80
+            Width = 200
+            Height = 21
+            DataField = 'Nome'
+            DataSource = dtsManuBD
+            TabOrder = 0
+          end
+          object DBLookupComboBox1: TDBLookupComboBox
+            Left = 22
+            Top = 120
+            Width = 178
+            Height = 21
+            DataField = 'DescCargo'
+            DataSource = dtsManuBD
+            TabOrder = 1
+            OnEnter = DBLookupComboBox1Enter
+          end
+          object DBLookupComboBox2: TDBLookupComboBox
+            Left = 22
+            Top = 80
+            Width = 57
+            Height = 21
+            DataField = 'DescTratamento'
+            DataSource = dtsManuBD
+            TabOrder = 2
+            OnEnter = DBLookupComboBox2Enter
+          end
+        end
+      end
+    end
+  end
+  inherited cdsManuBD: TClientDataSetUrb
+    object cdsManuBDID_Responsavel: TIntegerField
+      DisplayLabel = 'ID. Resp.'
+      FieldName = 'ID_Responsavel'
+      Required = True
+      DisplayFormat = '000000'
+    end
+    object cdsManuBDDescTratamento: TStringField
+      DisplayLabel = 'Trat.'
+      DisplayWidth = 5
+      FieldKind = fkLookup
+      FieldName = 'DescTratamento'
+      LookupDataSet = cdsTratamento
+      LookupKeyFields = 'ID_Tratamento'
+      LookupResultField = 'Sigla'
+      KeyFields = 'ID_Tratamento'
+      Size = 30
+      Lookup = True
+    end
+    object cdsManuBDNome: TStringField
+      DisplayWidth = 25
+      FieldName = 'Nome'
+      Required = True
+      Size = 50
+    end
+    object cdsManuBDID_Cargo: TIntegerField
+      FieldName = 'ID_Cargo'
+      Visible = False
+    end
+    object cdsManuBDDescCargo: TStringField
+      DisplayLabel = 'Cargo'
+      DisplayWidth = 20
+      FieldKind = fkLookup
+      FieldName = 'DescCargo'
+      LookupDataSet = cdsCargo
+      LookupKeyFields = 'ID_Cargo'
+      LookupResultField = 'Descricao'
+      KeyFields = 'ID_Cargo'
+      Size = 30
+      Lookup = True
+    end
+    object cdsManuBDID_Tratamento: TIntegerField
+      DisplayLabel = 'ID. Tratamento'
+      FieldName = 'ID_Tratamento'
+      Required = True
+      Visible = False
+      DisplayFormat = '000000'
+    end
+  end
+  object cdsCargo: TClientDataSetUrb
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspCargo'
+    Left = 250
+    Top = 30
+  end
+  object dtsCargo: TDataSourceUrb
+    AutoEdit = False
+    DataSet = cdsCargo
+    Left = 278
+    Top = 30
+  end
+  object cdsTratamento: TClientDataSetUrb
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspTratamento'
+    Left = 250
+    Top = 58
+  end
+  object dtsTratamento: TDataSourceUrb
+    AutoEdit = False
+    DataSet = cdsTratamento
+    Left = 278
+    Top = 58
+  end
+  object sqlCargo: TSQLDataSet
+    GetMetadata = False
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = frmPrincipal.ConexaoBD
+    Left = 194
+    Top = 30
+  end
+  object dspCargo: TDataSetProviderUrb
+    DataSet = sqlCargo
+    Options = [poAllowCommandText]
+    Left = 222
+    Top = 30
+  end
+  object sqlTratamento: TSQLDataSet
+    GetMetadata = False
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = frmPrincipal.ConexaoBD
+    Left = 194
+    Top = 58
+  end
+  object dspTratamento: TDataSetProviderUrb
+    DataSet = sqlTratamento
+    Options = [poAllowCommandText]
+    Left = 222
+    Top = 58
+  end
+end

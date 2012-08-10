@@ -1,0 +1,23 @@
+inherited frmCadOrgaoEmissor: TfrmCadOrgaoEmissor
+  Caption = 'frmCadOrgaoEmissor'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlManutencaoBD: TPanel
+    inherited pgcManutencaoBD: TPageControl
+      inherited tbsListagem: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
+        ExplicitWidth = 507
+        ExplicitHeight = 260
+        inherited pnlListagem: TPanel
+          ExplicitWidth = 507
+          ExplicitHeight = 260
+        end
+      end
+    end
+  end
+  inherited pnlBotoes: TPanel
+    ExplicitLeft = 546
+    ExplicitHeight = 288
+  end
+end

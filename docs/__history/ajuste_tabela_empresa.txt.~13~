@@ -1,0 +1,90 @@
+/*------------------------------------------------------------------------------
+SELECT com os totais de manifestos por empresa.
+*/------------------------------------------------------------------------------
+ SELECT   e.ID_Empresa,
+          e.RazaoSocial,
+          COUNT(m.GerID_Empresa) AS Total
+ FROM     manifesto m RIGHT JOIN empresa e ON m.GerID_Empresa = e.ID_Empresa
+ GROUP BY e.ID_Empresa
+ ORDER BY e.ID_Empresa;
+
+
+/*------------------------------------------------------------------------------
+SELECT que verifica se existe algum manifesto com o código da
+empresa sendo usado como Geradora, Transportadora ou Receptora.
+*/------------------------------------------------------------------------------
+ SELECT *
+ FROM   manifesto
+ WHERE  (GerID_Empresa   = 337)
+    OR  (TransID_Empresa = 337)
+    OR  (RecepID_Empresa = 337);
+
+
+/*------------------------------------------------------------------------------
+ SELECT com os totais de registro que a Acergy Brasil S/A - Código 273
+ vai passar a ter.
+*/------------------------------------------------------------------------------
+SELECT COUNT(*) AS TOTAL
+FROM manifesto
+WHERE GerID_Empresa IN (273, 286, 292, 134, 296, 329, 327, 530, 194, 385, 338, 402, 396, 168, 167, 546, 250, 337, 636);
+
+
+
+
+
+/*------------------------------------------------------------------------------
+ UPDATEs e DELETEs para ajustar os manifestos da empresa
+ Acumuladores Moura S/A - Código 297
+*/------------------------------------------------------------------------------
+ DELETE FROM empresa
+ WHERE  ID_Empresa IN (298);
+*/------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+ UPDATEs e DELETEs para ajustar os manifestos da empresa
+ Acergy Brasil S/A - Código 273
+*/------------------------------------------------------------------------------
+ UPDATE manifesto
+ SET    GerID_Empresa = 273
+ WHERE GerID_Empresa IN (273, 286, 292, 134, 296, 329, 327, 530, 194, 385, 338, 402, 396, 168, 167, 546, 250, 337, 636);
+
+ UPDATE manifesto
+ SET    TransID_Empresa = 273
+ WHERE  TransID_Empresa IN (273, 286, 292, 134, 296, 329, 327, 530, 194, 385, 338, 402, 396, 168, 167, 546, 250, 337, 636);
+
+ UPDATE manifesto
+ SET    RecepID_Empresa = 273
+ WHERE  RecepID_Empresa IN (273, 286, 292, 134, 296, 329, 327, 530, 194, 385, 338, 402, 396, 168, 167, 546, 250, 337, 636);
+
+ DELETE FROM empresa
+ WHERE  ID_Empresa IN (286, 292, 134, 296, 329, 327, 530, 194, 385, 338, 402, 396, 168, 167, 546, 250, 337, 636);
+
+ UPDATE empresa
+ SET Telefone = "02227739964"
+ WHERE  ID_Empresa = "273";
+*/------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+ UPDATEs e DELETEs para ajustar os manifestos da empresa
+ Aces Aluguéis de Caixas Eq. - Código 270
+*/------------------------------------------------------------------------------
+ UPDATE empresa
+ SET    RazaoSocial = "Aces Aluguéis de Caixas Eq.",
+        Endereco    = "Av. 01 S/Nº Lt 256 Qd 07 Balneário",
+        Responsavel = "Maria do Socorro Pereira"
+ WHERE  ID_Empresa  = 270;
+*/------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+ UPDATEs e DELETEs para ajustar os manifestos da empresa
+ Água e Seco Lavanderias Ltda - Código 125
+*/------------------------------------------------------------------------------
+ UPDATE empresa
+ SET    RazaoSocial = "Água e Seco Lavanderias Ltda",
+        Endereco    = "Rua Teixeira de Gouveia nº 1157",
+        Municipio   = "Macaé",
+        Responsavel = "Sr. Adriano de Almeida Gon"
+ WHERE  ID_Empresa  = 125;
+
+
+

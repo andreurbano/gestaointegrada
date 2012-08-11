@@ -16,7 +16,6 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     inherited pgcManutencaoBD: TPageControl
       Width = 856
       Height = 376
-      ActivePage = tbsCadastro
       ExplicitWidth = 496
       ExplicitHeight = 376
       inherited tbsListagem: TTabSheet
@@ -45,8 +44,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
         inherited pnlCadastro: TPanel
           Width = 848
           Height = 366
-          ExplicitTop = 1
-          ExplicitWidth = 848
+          ExplicitWidth = 488
           ExplicitHeight = 366
           object Label1: TLabel
             Left = 11
@@ -119,8 +117,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             ParentFont = False
           end
           object Label6: TLabel
-            Left = 383
-            Top = 1
+            Left = 11
+            Top = 177
             Width = 53
             Height = 13
             Caption = 'N'#186' Licen'#231'a'
@@ -133,8 +131,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             ParentFont = False
           end
           object Label8: TLabel
-            Left = 627
-            Top = 107
+            Left = 11
+            Top = 215
             Width = 67
             Height = 13
             Caption = 'Valor Contrato'
@@ -147,8 +145,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             ParentFont = False
           end
           object Label9: TLabel
-            Left = 735
-            Top = 107
+            Left = 119
+            Top = 215
             Width = 72
             Height = 13
             Caption = 'Valor Tonelada'
@@ -161,8 +159,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             ParentFont = False
           end
           object btnCadTipo: TSpeedButton
-            Left = 605
-            Top = 14
+            Left = 233
+            Top = 190
             Width = 21
             Height = 21
             Hint = 'Cadastro de Tipo de Empresa'
@@ -173,8 +171,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             OnClick = btnCadTipoClick
           end
           object Label10: TLabel
-            Left = 603
-            Top = 22
+            Left = 11
+            Top = 254
             Width = 62
             Height = 13
             Caption = 'Respons'#225'vel'
@@ -266,8 +264,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             FocusControl = DBEdit16
           end
           object Label19: TLabel
-            Left = 492
-            Top = 1
+            Left = 120
+            Top = 177
             Width = 62
             Height = 13
             Caption = 'Classifica'#231#227'o'
@@ -319,8 +317,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             TabOrder = 6
           end
           object DBEdit6: TDBEdit
-            Left = 383
-            Top = 14
+            Left = 11
+            Top = 190
             Width = 105
             Height = 21
             DataField = 'NumLicencaFEEMA'
@@ -328,8 +326,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             TabOrder = 8
           end
           object DBEdit7: TDBEdit
-            Left = 627
-            Top = 123
+            Left = 11
+            Top = 231
             Width = 105
             Height = 21
             DataField = 'ValorContrato'
@@ -337,8 +335,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             TabOrder = 9
           end
           object DBEdit8: TDBEdit
-            Left = 735
-            Top = 123
+            Left = 119
+            Top = 231
             Width = 105
             Height = 21
             DataField = 'ValorTonelada'
@@ -346,8 +344,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             TabOrder = 10
           end
           object gbxRelatorios: TGroupBox
-            Left = 380
-            Top = 124
+            Left = 260
+            Top = 179
             Width = 113
             Height = 87
             Caption = 'Relat'#243'rios'
@@ -396,12 +394,11 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             end
           end
           object rdgResumoGeral: TDBRadioGroup
-            Left = 11
-            Top = 170
-            Width = 827
-            Height = 50
+            Left = 260
+            Top = 270
+            Width = 113
+            Height = 87
             Caption = 'Resumo Geral'
-            Columns = 3
             DataField = 'TipoResumoGeral'
             DataSource = dtsManuBD
             Font.Charset = DEFAULT_CHARSET
@@ -423,16 +420,16 @@ inherited frmCadEmpresa: TfrmCadEmpresa
           end
           object txtObs: TDBMemo
             Left = 11
-            Top = 226
-            Width = 827
-            Height = 131
+            Top = 295
+            Width = 240
+            Height = 62
             DataField = 'Obs'
             DataSource = dtsManuBD
             TabOrder = 14
           end
           object DBEdit9: TDBEdit
-            Left = 603
-            Top = 38
+            Left = 11
+            Top = 270
             Width = 240
             Height = 21
             DataField = 'Responsavel'
@@ -503,8 +500,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             TabOrder = 18
           end
           object DBLookupComboBox2: TDBLookupComboBox
-            Left = 492
-            Top = 14
+            Left = 120
+            Top = 190
             Width = 113
             Height = 21
             DataField = 'Classificacao'
@@ -1590,7 +1587,6 @@ inherited frmCadEmpresa: TfrmCadEmpresa
       000000000000}
   end
   inherited cdsManuBD: TClientDataSetUrb
-    Active = True
     Left = 251
     Top = 1
     object cdsManuBDID_Empresa: TIntegerField
@@ -1621,6 +1617,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
       Size = 80
     end
     object cdsManuBDMunicipio: TStringField
+      DisplayWidth = 19
       FieldName = 'Municipio'
       Required = True
       Size = 30
@@ -1637,11 +1634,6 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     end
     object cdsManuBDTelefone: TStringField
       FieldName = 'Telefone'
-      Size = 15
-    end
-    object cdsManuBDTelefoneII: TStringField
-      DisplayLabel = 'Telefone II'
-      FieldName = 'TelefoneII'
       Size = 15
     end
     object cdsManuBDNumLicencaFEEMA: TStringField
@@ -1722,6 +1714,11 @@ inherited frmCadEmpresa: TfrmCadEmpresa
       FieldName = 'InscMunic'
       Visible = False
       Size = 9
+    end
+    object cdsManuBDTelefoneII: TStringField
+      DisplayLabel = 'Telefone II'
+      FieldName = 'TelefoneII'
+      Size = 15
     end
     object cdsManuBDNomeFantasia: TStringField
       FieldKind = fkLookup
@@ -1882,28 +1879,28 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     Aggregates = <>
     Params = <>
     ProviderName = 'dspClassificacao'
-    Left = 565
-    Top = 67
+    Left = 437
+    Top = 267
   end
   object dtsClassificacao: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsClassificacao
-    Left = 593
-    Top = 67
+    Left = 465
+    Top = 267
   end
   object cdsFantasia: TClientDataSetUrb
     Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspFantasia'
-    Left = 565
-    Top = 98
+    Left = 437
+    Top = 298
   end
   object dtsFantasia: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsFantasia
-    Left = 593
-    Top = 98
+    Left = 465
+    Top = 298
   end
   object sqlClassificacao: TSQLDataSet
     SchemaName = 'andre'
@@ -1915,15 +1912,15 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 508
-    Top = 69
+    Left = 380
+    Top = 269
   end
   object dspClassificacao: TDataSetProviderUrb
     DataSet = sqlClassificacao
     Options = [poAllowCommandText]
     UpdateMode = upWhereKeyOnly
-    Left = 536
-    Top = 69
+    Left = 408
+    Top = 269
   end
   object sqlFantasia: TSQLDataSet
     SchemaName = 'andre'
@@ -1933,14 +1930,14 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 507
-    Top = 99
+    Left = 379
+    Top = 299
   end
   object dspFantasia: TDataSetProviderUrb
     DataSet = sqlFantasia
     Options = [poAllowCommandText]
     UpdateMode = upWhereKeyOnly
-    Left = 535
-    Top = 99
+    Left = 407
+    Top = 299
   end
 end

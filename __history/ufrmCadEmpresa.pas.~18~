@@ -55,6 +55,7 @@ type
     cdsManuBDRazaoSocial: TStringField;
     cdsManuBDID_Classificacao: TIntegerField;
     cdsManuBDEndereco: TStringField;
+    cdsManuBDMunicipio: TStringField;
     cdsManuBDUF: TStringField;
     cdsManuBDTelefone: TStringField;
     cdsManuBDNumLicencaFEEMA: TStringField;
@@ -107,7 +108,6 @@ type
     cdsManuBDClassificacao: TStringField;
     Label19: TLabel;
     DBLookupComboBox2: TDBLookupComboBox;
-    cdsManuBDMunicipio: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure btnCadTipoClick(Sender: TObject);
     procedure DBLookupComboBox1Enter(Sender: TObject);

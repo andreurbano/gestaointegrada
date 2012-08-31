@@ -2,5 +2,7 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2012/08/09 13:43:38.125.txt,C:\Users\andre\Documents\projects\d2010\gestaointegrada\New1.txt=C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\ajuste_tabela_empresa.txt</Transaction>
+    <Transaction>2012/08/29 08:21:22.656.txt,C:\Users\andre\projetos\d2010\gestaointegrada\docs\ajuste_tabela_empresa.txt=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.txt</Transaction>
+    <Transaction>2012/08/29 08:28:25.816.sql,C:\Users\andre\projetos\d2010\gestaointegrada\New1.sql=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql</Transaction>
   </Transactions>
 </BorlandProject>

@@ -2,10 +2,16 @@ inherited frmLoginFerpan: TfrmLoginFerpan
   Left = 508
   Top = 212
   Caption = 'Login do Sistema...'
+  ExplicitWidth = 511
+  ExplicitHeight = 442
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlLogin: TPanel
+    Color = 13429977
+    ParentBackground = False
     inherited Panel1: TPanel
+      Color = 13429977
+      ParentBackground = False
       inherited lblSenha: TLabel
         Left = 58
         ExplicitLeft = 58
@@ -29,7 +35,11 @@ inherited frmLoginFerpan: TfrmLoginFerpan
     end
     inherited Panel6: TPanel
       inherited Panel3: TPanel
+        Color = 13429977
+        ParentBackground = False
         inherited Panel4: TPanel
+          Color = 13429977
+          ParentBackground = False
           inherited Label2: TLabel
             Left = 36
             Top = -2
@@ -63,8 +73,14 @@ inherited frmLoginFerpan: TfrmLoginFerpan
           end
         end
         inherited pnlImagem01: TPanel
+          Color = 13429977
+          ParentBackground = False
           inherited pnlImagem02: TPanel
+            Color = 13429977
+            ParentBackground = False
             inherited pnlLogo: TPanel
+              Color = 13429977
+              ParentBackground = False
               inherited imgLogo: TImage
                 Align = alClient
                 AutoSize = False
@@ -998,7 +1014,12 @@ inherited frmLoginFerpan: TfrmLoginFerpan
     end
     inherited pgcOpcoes: TPageControl
       ActivePage = tshSistema
+      Style = tsButtons
       inherited tshSistema: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 27
+        ExplicitWidth = 474
+        ExplicitHeight = 117
         inherited gbxBancoDados: TGroupBox
           inherited cbxSistemaBDFabricante: TComboBox
             Items.Strings = (
@@ -1009,6 +1030,12 @@ inherited frmLoginFerpan: TfrmLoginFerpan
               'MySQLD2007')
           end
         end
+      end
+      inherited tshArqConfig: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 27
+        ExplicitWidth = 474
+        ExplicitHeight = 117
       end
     end
   end

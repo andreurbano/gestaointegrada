@@ -4,44 +4,45 @@ inherited frmCadManifesto: TfrmCadManifesto
   Anchors = [akLeft, akTop, akBottom]
   BorderIcons = [biSystemMenu, biMinimize, biMaximize]
   Caption = 'Cadastro de Manifesto de Res'#237'duos'
-  ClientHeight = 605
+  ClientHeight = 490
   ClientWidth = 999
   ExplicitWidth = 1015
-  ExplicitHeight = 643
+  ExplicitHeight = 528
   DesignSize = (
     999
-    605)
+    490)
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlManutencaoBD: TPanel
     Top = 0
     Width = 909
-    Height = 571
+    Height = 456
     ExplicitTop = 0
     ExplicitWidth = 909
     ExplicitHeight = 571
     DesignSize = (
       909
-      571)
+      456)
     inherited pgcManutencaoBD: TPageControl
       Width = 889
-      Height = 553
+      Height = 438
+      ActivePage = tbsListagem
       ExplicitWidth = 889
-      ExplicitHeight = 553
+      ExplicitHeight = 438
       inherited tbsListagem: TTabSheet
-        ExplicitLeft = 4
-        ExplicitTop = 6
         ExplicitWidth = 881
-        ExplicitHeight = 543
+        ExplicitHeight = 428
         inherited pnlListagem: TPanel
           Width = 881
-          Height = 543
+          Height = 428
+          Color = 13429977
+          ParentBackground = False
           ExplicitWidth = 881
-          ExplicitHeight = 543
+          ExplicitHeight = 428
           inherited dbgManutencaoBD: TDBGridUrb
             Top = 73
             Width = 872
-            Height = 464
+            Height = 349
           end
         end
         object gbxPeriodo: TGroupBox
@@ -52,11 +53,14 @@ inherited frmCadManifesto: TfrmCadManifesto
           Align = alCustom
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Pesquisa'
+          Color = 13429977
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
           ParentFont = False
           TabOrder = 1
           DesignSize = (
@@ -176,28 +180,27 @@ inherited frmCadManifesto: TfrmCadManifesto
         end
       end
       inherited tbsCadastro: TTabSheet
-        ExplicitLeft = 4
-        ExplicitTop = 6
         ExplicitWidth = 881
-        ExplicitHeight = 543
+        ExplicitHeight = 428
         inherited pnlCadastro: TPanel
           Width = 881
-          Height = 543
+          Height = 428
           ExplicitWidth = 881
-          ExplicitHeight = 543
+          ExplicitHeight = 428
           object pgcManifesto: TPageControl
             Left = 8
             Top = 12
             Width = 865
-            Height = 519
+            Height = 404
             ActivePage = tshResiduo
             Anchors = [akLeft, akTop, akRight, akBottom]
+            Style = tsButtons
             TabOrder = 0
             object tshResiduo: TTabSheet
               Caption = '&Res'#237'duo'
               DesignSize = (
                 857
-                491)
+                373)
               object lblNumero: TLabel
                 Left = 400
                 Top = 102
@@ -531,7 +534,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object lblObs: TLabel
                 Left = 3
-                Top = 462
+                Top = 344
                 Width = 19
                 Height = 13
                 Anchors = [akLeft, akBottom]
@@ -690,7 +693,7 @@ inherited frmCadManifesto: TfrmCadManifesto
                 Left = 75
                 Top = 181
                 Width = 753
-                Height = 295
+                Height = 177
                 Hint = 'Observa'#231#227'o'
                 Anchors = [akLeft, akTop, akRight, akBottom]
                 DataField = 'Obs'
@@ -758,7 +761,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               ImageIndex = 1
               DesignSize = (
                 857
-                491)
+                373)
               object lblGerEmpresa: TLabel
                 Left = 151
                 Top = 18
@@ -1013,7 +1016,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               OnEnter = TabSheet3Enter
               DesignSize = (
                 857
-                491)
+                373)
               object Label29: TLabel
                 Left = 3
                 Top = 130
@@ -1320,7 +1323,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               OnEnter = TabSheet4Enter
               DesignSize = (
                 857
-                491)
+                373)
               object Label31: TLabel
                 Left = 151
                 Top = 18
@@ -1550,7 +1553,7 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
   end
   inherited stbManutencaoBD: TStatusBar
-    Top = 586
+    Top = 471
     Width = 999
     Panels = <
       item
@@ -1565,7 +1568,7 @@ inherited frmCadManifesto: TfrmCadManifesto
   inherited pnlBotoes: TPanel
     Left = 918
     Top = 0
-    Height = 571
+    Height = 456
     ExplicitLeft = 918
     ExplicitTop = 0
     ExplicitHeight = 571
@@ -1590,7 +1593,7 @@ inherited frmCadManifesto: TfrmCadManifesto
   inherited imgManutencaoBD: TImageList
     Left = 806
     Bitmap = {
-      494C01010A000C004C001A001A00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010A000C0050001A001A00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000680000004E0000000100200000000000C07E
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

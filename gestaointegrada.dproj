@@ -246,7 +246,8 @@
 			<DCCReference Include="ufrmCadOrgaoEmissor.pas">
 				<Form>frmCadOrgaoEmissor</Form>
 			</DCCReference>
-			<None Include="docs\ajuste_tabela_empresa.txt"/>
+			<None Include="scriptsBD\ajuste_tabela_empresa.sql"/>
+			<None Include="scriptsBD\selects.sql"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

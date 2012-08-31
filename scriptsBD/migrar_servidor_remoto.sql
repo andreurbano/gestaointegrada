@@ -1,3 +1,6 @@
+grant all on ferpan.* to martine@"%" identified by "oT7v1B" with grant option;
+grant all on ferpan.* to eliana@"%" identified by "eliana" with grant option;
+
 USE ferpan;
 
 DROP TABLE usuario_modulo_bkp;
@@ -73,6 +76,7 @@ CREATE TABLE logra_bairro (
 )
 ENGINE = InnoDB;
 
+
 ALTER TABLE usuario ADD COLUMN Identidade VARCHAR(15) AFTER Email;
 
 
@@ -85,6 +89,7 @@ CREATE TABLE `ferpan`.`protoc_empresa` (
 )
 ENGINE = InnoDB;
 
+
 CREATE  TABLE `ferpan`.`local_de_origem` (
   `ID_Local_Origem` INT NOT NULL ,
   `ID_Empresa` INT NOT NULL ,
@@ -92,18 +97,7 @@ CREATE  TABLE `ferpan`.`local_de_origem` (
   PRIMARY KEY (`ID_Local_Origem`) )
 ENGINE = InnoDB;
 
-
-UPDATE empresa
-SET Telefone   = "2124019505",
-    TelefoneII = "2124018026",
-    CEP        = "21720001",
-    CNPJ       = "34143693000193",
-    InscEstado = "82246819",
-    InscMunic  = "Isento",
-    Email      = "contato@ferpan.com.br"
-WHERE ID_Empresa = 57;
-
-
-
 ALTER TABLE procedencia ADD COLUMN Id_Empresa INT(11) NULL  AFTER Descricao;
+
+DELETE FROM usuario_modulo WHERE ID_Usuario_Modulo IN (129, 130, 131, 133, 135, 136, 137, 138, 236, 140);
 

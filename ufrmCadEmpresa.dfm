@@ -16,7 +16,6 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     inherited pgcManutencaoBD: TPageControl
       Width = 858
       Height = 352
-      ActivePage = tbsCadastro
       ExplicitWidth = 858
       ExplicitHeight = 352
       inherited tbsListagem: TTabSheet
@@ -47,13 +46,13 @@ inherited frmCadEmpresa: TfrmCadEmpresa
           Height = 342
           ExplicitWidth = 850
           ExplicitHeight = 342
-          object Label1: TLabel
-            Left = 438
-            Top = 2
+          object lblRazaoSocial: TLabel
+            Left = 428
+            Top = 4
             Width = 63
             Height = 13
             Caption = 'Raz'#227'o Social'
-            FocusControl = DBEdit1
+            FocusControl = txtRazaoSocial
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
@@ -73,13 +72,13 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             ShowHint = True
             OnClick = btnCadTipoClick
           end
-          object Label10: TLabel
+          object lblResponsavel: TLabel
             Left = 654
-            Top = 2
+            Top = 4
             Width = 62
             Height = 13
             Caption = 'Respons'#225'vel'
-            FocusControl = DBEdit9
+            FocusControl = txtResponsavel
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
@@ -89,7 +88,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
           end
           object lblNomeFantasia: TLabel
             Left = 11
-            Top = 2
+            Top = 4
             Width = 71
             Height = 13
             Caption = 'Nome Fantasia'
@@ -100,20 +99,21 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             Font.Style = []
             ParentFont = False
           end
-          object DBEdit1: TDBEdit
-            Left = 439
+          object txtRazaoSocial: TDBEdit
+            Left = 428
             Top = 18
             Width = 208
             Height = 21
             DataField = 'RazaoSocial'
             DataSource = dtsManuBD
-            TabOrder = 0
+            TabOrder = 1
           end
           object gbxRelatorios: TGroupBox
-            Left = 406
+            Left = 428
             Top = 156
-            Width = 432
+            Width = 412
             Height = 53
+            Anchors = [akLeft, akTop, akRight]
             Caption = 'Relat'#243'rios'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -121,10 +121,10 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             Font.Name = 'MS Sans Serif'
             Font.Style = []
             ParentFont = False
-            TabOrder = 1
+            TabOrder = 6
             object chkContaminado: TDBCheckBox
-              Left = 10
-              Top = 18
+              Left = 58
+              Top = 23
               Width = 98
               Height = 17
               Caption = 'Contaminado'
@@ -135,9 +135,9 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               ValueUnchecked = 'False'
             end
             object chkReciclavel: TDBCheckBox
-              Left = 114
-              Top = 19
-              Width = 98
+              Left = 187
+              Top = 23
+              Width = 72
               Height = 17
               Caption = 'Recicl'#225'vel'
               DataField = 'FlagRelReciclavel'
@@ -147,9 +147,9 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               ValueUnchecked = 'False'
             end
             object chkSucata: TDBCheckBox
-              Left = 265
-              Top = 18
-              Width = 98
+              Left = 310
+              Top = 23
+              Width = 65
               Height = 17
               Caption = 'Sucata'
               DataField = 'FlagRelSucata'
@@ -162,7 +162,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
           object rdgResumoGeral: TDBRadioGroup
             Left = 11
             Top = 156
-            Width = 389
+            Width = 409
             Height = 53
             Caption = 'Resumo Geral'
             Columns = 3
@@ -179,7 +179,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               'Lixo Comum')
             ParentBackground = True
             ParentFont = False
-            TabOrder = 3
+            TabOrder = 5
             Values.Strings = (
               '1'
               '2'
@@ -187,19 +187,21 @@ inherited frmCadEmpresa: TfrmCadEmpresa
           end
           object txtObs: TDBMemo
             Left = 11
-            Top = 230
-            Width = 827
-            Height = 106
+            Top = 222
+            Width = 829
+            Height = 110
+            Anchors = [akLeft, akTop, akRight, akBottom]
             DataField = 'Obs'
             DataSource = dtsManuBD
             ScrollBars = ssBoth
-            TabOrder = 4
+            TabOrder = 7
           end
-          object DBEdit9: TDBEdit
+          object txtResponsavel: TDBEdit
             Left = 654
             Top = 18
-            Width = 231
+            Width = 186
             Height = 21
+            Anchors = [akLeft, akTop, akRight]
             DataField = 'Responsavel'
             DataSource = dtsManuBD
             TabOrder = 2
@@ -207,11 +209,11 @@ inherited frmCadEmpresa: TfrmCadEmpresa
           object dblNomeFantasia: TDBLookupComboBox
             Left = 11
             Top = 18
-            Width = 389
+            Width = 409
             Height = 21
             DataField = 'NomeFantasia'
             DataSource = dtsManuBD
-            TabOrder = 5
+            TabOrder = 0
           end
           object gbxEndereco: TGroupBox
             Left = 11
@@ -219,7 +221,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             Width = 409
             Height = 102
             Caption = 'Endere'#231'o'
-            TabOrder = 6
+            TabOrder = 3
             object lblLogradouro: TLabel
               Left = 12
               Top = 18
@@ -235,8 +237,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               ParentFont = False
             end
             object lblCEP: TLabel
-              Left = 199
-              Top = 19
+              Left = 200
+              Top = 18
               Width = 21
               Height = 13
               Caption = 'CEP'
@@ -249,15 +251,15 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               ParentFont = False
             end
             object lblEmail: TLabel
-              Left = 199
-              Top = 60
+              Left = 200
+              Top = 59
               Width = 25
               Height = 13
               Caption = 'Email'
               FocusControl = txtEmail
             end
             object lblMunicipio: TLabel
-              Left = 262
+              Left = 264
               Top = 18
               Width = 47
               Height = 13
@@ -271,8 +273,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               ParentFont = False
             end
             object lblUF: TLabel
-              Left = 373
-              Top = 19
+              Left = 374
+              Top = 18
               Width = 14
               Height = 13
               Caption = 'UF'
@@ -286,7 +288,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             end
             object lblTelefone: TLabel
               Left = 12
-              Top = 60
+              Top = 59
               Width = 42
               Height = 13
               Caption = 'Telefone'
@@ -298,8 +300,8 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               ParentFont = False
             end
             object lblTelefoneII: TLabel
-              Left = 120
-              Top = 60
+              Left = 106
+              Top = 59
               Width = 51
               Height = 13
               Caption = 'Telefone II'
@@ -315,46 +317,45 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               TabOrder = 0
             end
             object txtCEP: TDBEdit
-              Left = 199
+              Left = 200
               Top = 33
               Width = 59
               Height = 21
               DataField = 'CEP'
               DataSource = dtsManuBD
-              MaxLength = 9
               TabOrder = 1
             end
             object txtEmail: TDBEdit
-              Left = 199
+              Left = 200
               Top = 73
-              Width = 194
+              Width = 199
               Height = 21
               DataField = 'Email'
               DataSource = dtsManuBD
-              TabOrder = 2
+              TabOrder = 6
             end
             object txtMunicipio: TDBEdit
-              Left = 262
+              Left = 264
               Top = 33
               Width = 105
               Height = 21
               DataField = 'Municipio'
               DataSource = dtsManuBD
-              TabOrder = 3
+              TabOrder = 2
             end
             object txtUF: TDBEdit
-              Left = 373
-              Top = 32
+              Left = 374
+              Top = 33
               Width = 25
               Height = 21
               DataField = 'UF'
               DataSource = dtsManuBD
-              TabOrder = 4
+              TabOrder = 3
             end
             object txtTelefoneII: TDBEdit
-              Left = 120
+              Left = 106
               Top = 73
-              Width = 78
+              Width = 89
               Height = 21
               DataField = 'TelefoneII'
               DataSource = dtsManuBD
@@ -363,27 +364,28 @@ inherited frmCadEmpresa: TfrmCadEmpresa
             object txtTelefome: TDBEdit
               Left = 12
               Top = 73
-              Width = 78
+              Width = 89
               Height = 21
               DataField = 'Telefone'
               DataSource = dtsManuBD
-              TabOrder = 6
+              TabOrder = 4
             end
           end
           object gbxDadosEmpresa: TGroupBox
-            Left = 428
-            Top = 50
+            Left = 430
+            Top = 45
             Width = 410
-            Height = 97
+            Height = 102
+            Anchors = [akLeft, akTop, akRight]
             Caption = 'Dados Empresa'
-            TabOrder = 7
-            object Label13: TLabel
-              Left = 8
-              Top = 19
+            TabOrder = 4
+            object lblCNPJ: TLabel
+              Left = 12
+              Top = 18
               Width = 27
               Height = 13
               Caption = 'CNPJ'
-              FocusControl = DBEdit11
+              FocusControl = txtCNPJ
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -391,41 +393,13 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               Font.Style = []
               ParentFont = False
             end
-            object Label14: TLabel
-              Left = 130
-              Top = 13
-              Width = 67
-              Height = 13
-              Caption = 'Insc. Estadual'
-              FocusControl = DBEdit12
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label6: TLabel
-              Left = 227
-              Top = 19
-              Width = 53
-              Height = 13
-              Caption = 'N'#186' Licen'#231'a'
-              FocusControl = DBEdit6
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -11
-              Font.Name = 'MS Sans Serif'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label8: TLabel
-              Left = 336
+            object lblInscEstado: TLabel
+              Left = 123
               Top = 18
               Width = 67
               Height = 13
-              Caption = 'Valor Contrato'
-              FocusControl = DBEdit7
+              Caption = 'Insc. Estadual'
+              FocusControl = txtInscEstado
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -433,29 +407,57 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               Font.Style = []
               ParentFont = False
             end
-            object Label15: TLabel
-              Left = 9
-              Top = 63
+            object lblNumLicencaFEEMA: TLabel
+              Left = 123
+              Top = 59
+              Width = 53
+              Height = 13
+              Caption = 'N'#186' Licen'#231'a'
+              FocusControl = txtNumLicencaFEEMA
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              ParentFont = False
+            end
+            object lblValorContrato: TLabel
+              Left = 317
+              Top = 59
+              Width = 67
+              Height = 13
+              Caption = 'Valor Contrato'
+              FocusControl = txtValorContrato
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              ParentFont = False
+            end
+            object lblInscMunic: TLabel
+              Left = 220
+              Top = 18
               Width = 71
               Height = 13
               Caption = 'Insc. Municipal'
-              FocusControl = DBEdit13
+              FocusControl = txtInscMunic
             end
-            object Label19: TLabel
-              Left = 227
+            object lblClassificacao: TLabel
+              Left = 12
               Top = 59
               Width = 62
               Height = 13
               Caption = 'Classifica'#231#227'o'
-              FocusControl = DBLookupComboBox2
+              FocusControl = dblClassificacao
             end
-            object Label9: TLabel
-              Left = 336
-              Top = 60
+            object lblValorTonelada: TLabel
+              Left = 220
+              Top = 59
               Width = 72
               Height = 13
               Caption = 'Valor Tonelada'
-              FocusControl = DBEdit8
+              FocusControl = txtValorTonelada
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -11
@@ -463,68 +465,68 @@ inherited frmCadEmpresa: TfrmCadEmpresa
               Font.Style = []
               ParentFont = False
             end
-            object DBEdit11: TDBEdit
-              Left = 10
-              Top = 32
-              Width = 118
+            object txtCNPJ: TDBEdit
+              Left = 12
+              Top = 33
+              Width = 105
               Height = 21
               DataField = 'CNPJ'
               DataSource = dtsManuBD
               TabOrder = 0
             end
-            object DBEdit12: TDBEdit
-              Left = 130
-              Top = 32
-              Width = 88
+            object txtInscEstado: TDBEdit
+              Left = 123
+              Top = 33
+              Width = 91
               Height = 21
               DataField = 'InscEstado'
               DataSource = dtsManuBD
               TabOrder = 1
             end
-            object DBEdit6: TDBEdit
-              Left = 219
-              Top = 31
-              Width = 105
+            object txtNumLicencaFEEMA: TDBEdit
+              Left = 123
+              Top = 73
+              Width = 91
               Height = 21
               DataField = 'NumLicencaFEEMA'
               DataSource = dtsManuBD
-              TabOrder = 2
+              TabOrder = 4
             end
-            object DBEdit7: TDBEdit
-              Left = 336
-              Top = 31
-              Width = 105
+            object txtValorContrato: TDBEdit
+              Left = 317
+              Top = 73
+              Width = 81
               Height = 21
               DataField = 'ValorContrato'
               DataSource = dtsManuBD
-              TabOrder = 3
+              TabOrder = 6
             end
-            object DBEdit13: TDBEdit
-              Left = 9
-              Top = 76
-              Width = 112
+            object txtInscMunic: TDBEdit
+              Left = 220
+              Top = 33
+              Width = 91
               Height = 21
               DataField = 'InscMunic'
               DataSource = dtsManuBD
-              TabOrder = 4
+              TabOrder = 2
             end
-            object DBLookupComboBox2: TDBLookupComboBox
-              Left = 211
-              Top = 72
-              Width = 113
-              Height = 21
-              DataField = 'Classificacao'
-              DataSource = dtsManuBD
-              TabOrder = 5
-            end
-            object DBEdit8: TDBEdit
-              Left = 337
+            object dblClassificacao: TDBLookupComboBox
+              Left = 12
               Top = 73
               Width = 105
               Height = 21
+              DataField = 'Classificacao'
+              DataSource = dtsManuBD
+              TabOrder = 3
+            end
+            object txtValorTonelada: TDBEdit
+              Left = 220
+              Top = 73
+              Width = 91
+              Height = 21
               DataField = 'ValorTonelada'
               DataSource = dtsManuBD
-              TabOrder = 6
+              TabOrder = 5
             end
           end
         end
@@ -545,7 +547,7 @@ inherited frmCadEmpresa: TfrmCadEmpresa
   end
   inherited imgManutencaoBD: TImageList
     Bitmap = {
-      494C01010A000C0028001A001A00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010A000C0030001A001A00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000680000004E0000000100200000000000C07E
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1606,7 +1608,6 @@ inherited frmCadEmpresa: TfrmCadEmpresa
       000000000000}
   end
   inherited cdsManuBD: TClientDataSetUrb
-    Active = True
     Left = 251
     Top = 1
     object cdsManuBDID_Empresa: TIntegerField
@@ -1670,12 +1671,14 @@ inherited frmCadEmpresa: TfrmCadEmpresa
     object cdsManuBDValorContrato: TFMTBCDField
       FieldName = 'ValorContrato'
       Visible = False
+      DisplayFormat = '###,###,##0.00'
       Precision = 14
       Size = 2
     end
     object cdsManuBDValorTonelada: TFMTBCDField
       FieldName = 'ValorTonelada'
       Visible = False
+      DisplayFormat = '###,###,##0.00'
       Precision = 14
       Size = 2
     end
@@ -1717,7 +1720,9 @@ inherited frmCadEmpresa: TfrmCadEmpresa
       Visible = False
     end
     object cdsManuBDCNPJ: TStringField
+      DisplayWidth = 17
       FieldName = 'CNPJ'
+      EditMask = '99.999.999/9999-99;0;_'
       Size = 15
     end
     object cdsManuBDInscEstado: TStringField

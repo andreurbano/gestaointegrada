@@ -97,7 +97,7 @@ begin
 
   // Cria e configura a tela principal.
   sTituloAplicacao := sSistemaEmpresaNomeFantasia + ' - ' + sSistemaDescricao + ' - ' + 'Versão ' + sVersao;
-  Application.Title := sTituloAplicacao;
+  Application.Title := 'Sistema de Gestão Integrado';
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   frmPrincipal.ConexaoBD.Connected := False;
 

@@ -100,19 +100,23 @@ begin
   inherited;
   sValorExtenso := Extenso(StrToFloat(txtNFValor.Text));
 
+
   sTelefone     := '(' +
                    Copy(cdsEmpresaEmissoraTelefone.Text,1,2) +
                    ')' +
                    Copy(cdsEmpresaEmissoraTelefone.Text,3,4) +
                    '-' +
-                   Copy(cdsEmpresaEmissoraTelefone.Text,6,4);
+//                   Copy(cdsEmpresaEmissoraTelefone.Text,6,4);
+                   Copy(cdsEmpresaEmissoraTelefone.Text,7,4);
+
 
   sTelefoneII   := '(' +
                    Copy(cdsEmpresaEmissoraTelefoneII.Text,1,2) +
                    ')' +
                    Copy(cdsEmpresaEmissoraTelefoneII.Text,3,4) +
                    '-' +
-                   Copy(cdsEmpresaEmissoraTelefoneII.Text,6,4);
+//                   Copy(cdsEmpresaEmissoraTelefoneII.Text,6,4);
+                   Copy(cdsEmpresaEmissoraTelefoneII.Text,7,4);
 
 //34.143.693/0001-93 Insc. Estadual: 82.246.819
   sCNPJ         := Copy(cdsEmpresaEmissoraCNPJ.Text,1 ,2) +
@@ -131,9 +135,17 @@ begin
                    '.' +
                    Copy(cdsEmpresaEmissoraInscEstado.Text,6 ,3);
 
-  sInscMun      := Copy(cdsEmpresaEmissoraInscMunic.Text,1 ,6) +
-                   '-' +
-                   Copy(cdsEmpresaEmissoraInscMunic.Text,7 ,1);
+
+  if cdsEmpresaEmissoraInscMunic.Text = 'Isento' then
+  begin
+    sInscMun := cdsEmpresaEmissoraInscMunic.Text;
+  end
+  else
+  begin
+    sInscMun := Copy(cdsEmpresaEmissoraInscMunic.Text,1 ,6) +
+                '-' +
+                Copy(cdsEmpresaEmissoraInscMunic.Text,7 ,1);
+  end;
 
   sCEP          := Copy(cdsEmpresaEmissoraCEP.Text,1 ,5) +
                    '-' +
@@ -162,15 +174,18 @@ begin
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorMunicipio', cdsEmpresaEmissoraMunicipio.Text );
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorEstado', cdsEmpresaEmissoraUF.Text );
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorCEP', sCEP );
-////  frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorTelefone', sTelefone );
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorCNPJ', sCNPJ );
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorInscEstado', sInscEst );
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorInscMunic', sInscMun );
-////  frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorTelefoneII', sTelefoneII );
+  frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorTelefone', 'Tel. ' + sTelefone + ' - ' + sTelefoneII );
+
 
 
 //  Format(cdsEmpresaEmissoraTelefoneII.Text);
 //  Format('%d %d %0:d %1:d', [10, 20])" produces the string '10 20 10 20'.
+
+
+
 
 
   frmPrincipal.rvpGestao_Empresarial.SetParam('varEmissorEmail', cdsEmpresaEmissoraEmail.Text );

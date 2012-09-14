@@ -178,8 +178,7 @@ var
  fTotManifPend:         Double;
  fTotManifPendCobRecep: Double;
 begin
- self.Color := $00E3E3E3;
- self.Color := clLtGray;
+ self.Color := clSilver;
 
 {
   //////////////////////////////////////////////////////////////////////////////

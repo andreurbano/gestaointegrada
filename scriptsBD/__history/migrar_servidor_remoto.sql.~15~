@@ -1,10 +1,5 @@
 grant all on ferpan.* to martine@"%" identified by "oT7v1B" with grant option;
 grant all on ferpan.* to eliana@"%" identified by "eliana" with grant option;
-grant all on ferpan.* to renata@"%" identified by "2112" with grant option;
-grant all on ferpan.* to marcele@"%" identified by "2404" with grant option;
-grant all on ferpan.* to andrea@"%" identified by "vitor17" with grant option;
-
-
 
 USE ferpan;
 

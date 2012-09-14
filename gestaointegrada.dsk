@@ -16,22 +16,34 @@ File_13=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\u
 
 [Modules]
 Module0=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas
-Module1=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj
-Module2=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
-Module3=C:\Users\andre\projetos\d2010\classes\Extensos.pas
-Module4=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
-Module5=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
-Module6=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
-Module7=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
-Module8=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
-Module9=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql
-Count=10
+Module1=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
+Module2=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
+Module3=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj
+Module4=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
+Module5=C:\Users\andre\projetos\d2010\classes\Extensos.pas
+Module6=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
+Module7=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
+Module8=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
+Module9=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
+Module10=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
+Module11=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql
+Count=12
 EditWindowCount=1
 
 [C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas]
 ModuleType=TSourceModule
 FormState=1
 FormOnTop=1
+
+[c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas]
+ModuleType=TSourceModule
+FormState=0
+FormOnTop=0
+
+[c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas]
+ModuleType=TSourceModule
+FormState=0
+FormOnTop=0
 
 [C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj]
 ModuleType=TBaseProject
@@ -83,7 +95,7 @@ FormState=1
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=10
+ViewCount=12
 CurrentEditView=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas
 View0=0
 View1=1
@@ -95,6 +107,8 @@ View6=6
 View7=7
 View8=8
 View9=9
+View10=10
+View11=11
 PercentageSizes=1
 Create=1
 Visible=1
@@ -113,7 +127,7 @@ BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
 LeftPanelSize=2597
 LeftPanelClients=PropertyInspector
-LeftPanelData=0000080001000000000000000000000000000000000000000000000100000000000000001100000050726F7065727479496E73706563746F72FFFFFFFF
+LeftPanelData=000008000102000000003C1000000000000002082100000000000001000000003C1000001100000050726F7065727479496E73706563746F72FFFFFFFF
 RightPanelSize=0
 BottomPanelSize=0
 BottomPanelClients=DockSite1
@@ -128,15 +142,37 @@ TabDockRightClients=DockSite2=0
 [View0]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas
-CursorX=1
-CursorY=1
-TopLine=1
+CursorX=24
+CursorY=182
+TopLine=161
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
 [View1]
+CustomEditViewType=TEditView
+Module=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
+CursorX=9
+CursorY=101
+TopLine=81
+LeftCol=1
+Elisions=
+Bookmarks={1,89,1}{2,72,1}
+EditViewName=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
+
+[View2]
+CustomEditViewType=TEditView
+Module=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
+
+[View3]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
 CursorX=1
@@ -147,7 +183,7 @@ Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
-[View2]
+[View4]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
 CursorX=102
@@ -158,7 +194,7 @@ Elisions=
 Bookmarks={0,389,2}{1,647,1}{2,485,1}{3,733,1}{4,542,1}{9,256,1}
 EditViewName=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
 
-[View3]
+[View5]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dpr
 CursorX=1
@@ -169,7 +205,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dpr
 
-[View4]
+[View6]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
 CursorX=43
@@ -180,7 +216,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
 
-[View5]
+[View7]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
 CursorX=23
@@ -191,7 +227,7 @@ Elisions=
 Bookmarks={1,104,1}
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
 
-[View6]
+[View8]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\classes\Extensos.pas
 CursorX=10
@@ -202,7 +238,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\classes\Extensos.pas
 
-[View7]
+[View9]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
 CursorX=33
@@ -213,7 +249,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
 
-[View8]
+[View10]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
 CursorX=1
@@ -224,7 +260,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
 
-[View9]
+[View11]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql
 CursorX=1
@@ -570,8 +606,8 @@ SplitPos=104
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=StoreRAV,
-ExpandedItems=Driver=0,TableScope=0,SQLConnection=0
+SelectedItem=Color,
+ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=0,GlassFrame=0,HorzScrollBar=0,FilterOptions=0
 
 [ModelViewTool]
 PercentageSizes=1

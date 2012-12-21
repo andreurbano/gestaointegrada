@@ -99,6 +99,7 @@ begin
   sTituloAplicacao := sSistemaEmpresaNomeFantasia + ' - ' + sSistemaDescricao + ' - ' + 'Versão ' + sVersao;
   Application.Title := 'Sistema de Gestão Integrado';
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  //  Application.CreateForm(TfrmDigitaOutros, frmDigitaOutros);
   frmPrincipal.ConexaoBD.Connected := False;
 
   ///////////////////////////////////////////////////////////////////////////////

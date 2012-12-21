@@ -1,39 +1,64 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'C:\sistemas\gestaointegrada.ini',0,1,1,37,27,0,0,,
-File_1=TSourceModule,'C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadEmpresa.pas',0,1,1,35,13,0,0,,
-File_2=TSourceModule,'C:\Users\andre\projetos\d2010\classes\FORMULARIOS\UFRMMANUTENCAOBD.pas',0,1,1,39,15,0,0,,
-File_3=TSourceModule,'C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadManifesto.pas',0,1,1,1,1,0,0,,
-File_4=TSourceModule,'C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatorio.pas',0,1,1,1,1,0,0,,
-File_5=TSourceModule,'C:\Users\andre\projetos\d2010\gestaointegrada\ufrmRelatRetiradaResiduo.pas',0,1,1,1,1,0,0,,
-File_6=TSourceModule,'C:\Program Files\TecnoSpeed\NFe\demoDelphi_4.0\Exemplo.pas',0,1,1,70,20,0,0,,
-File_7=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\pendencias.txt',0,1,1,1,17,0,0,,
-File_8=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\pendencias01.txt',0,1,1,25,28,0,0,,
-File_9=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\pendencias_revisao_telas.txt',0,1,1,35,22,0,0,,
-File_10=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql',0,1,68,28,98,0,0,,
-File_11=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\analise_e_pendencias.txt',0,1,1,1,1,0,0,,
-File_12=TSourceModule,'C:\Users\andre\Documents\projects\d2010\classes\FORMULARIOS\ufrmModeloMDIChild.pas',0,1,1,1,1,0,0,,
-File_13=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\ufrmCadEmpresa.pas',0,1,1,1,1,0,0,,
+File_0=TSourceModule,'C:\Users\andre\projetos\d2010\gestaointegrada\ufrmDigitaOutros.pas',0,1,1,1,1,0,0,,
+File_1=TSourceModule,'C:\sistemas\gestaointegrada.ini',0,1,1,37,27,0,0,,
+File_2=TSourceModule,'C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadEmpresa.pas',0,1,1,35,13,0,0,,
+File_3=TSourceModule,'C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatorio.pas',0,1,1,1,1,0,0,,
+File_4=TSourceModule,'C:\Users\andre\projetos\d2010\gestaointegrada\ufrmRelatRetiradaResiduo.pas',0,1,1,1,1,0,0,,
+File_5=TSourceModule,'C:\Program Files\TecnoSpeed\NFe\demoDelphi_4.0\Exemplo.pas',0,1,1,70,20,0,0,,
+File_6=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\pendencias.txt',0,1,1,1,17,0,0,,
+File_7=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\pendencias01.txt',0,1,1,25,28,0,0,,
+File_8=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\pendencias_revisao_telas.txt',0,1,1,35,22,0,0,,
+File_9=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql',0,1,68,28,98,0,0,,
+File_10=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\docs\analise_e_pendencias.txt',0,1,1,1,1,0,0,,
+File_11=TSourceModule,'C:\Users\andre\Documents\projects\d2010\classes\FORMULARIOS\ufrmModeloMDIChild.pas',0,1,1,1,1,0,0,,
+File_12=TSourceModule,'C:\Users\andre\Documents\projects\d2010\gestaointegrada\ufrmCadEmpresa.pas',0,1,1,1,1,0,0,,
 
 [Modules]
-Module0=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas
-Module1=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
-Module2=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
-Module3=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj
-Module4=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
-Module5=C:\Users\andre\projetos\d2010\classes\Extensos.pas
-Module6=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
-Module7=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
-Module8=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
-Module9=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
-Module10=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
-Module11=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql
-Count=12
+Module0=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadManifesto.pas
+Module1=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj
+Module2=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadResiduo.pas
+Module3=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas
+Module4=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
+Module5=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
+Module6=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
+Module7=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
+Module8=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
+Module9=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
+Module10=C:\Users\andre\projetos\d2010\classes\Extensos.pas
+Module11=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
+Module12=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
+Module13=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql
+Count=14
 EditWindowCount=1
+
+[C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadManifesto.pas]
+ModuleType=TSourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj]
+ModuleType=TBaseProject
+
+[C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadResiduo.pas]
+ModuleType=TSourceModule
+FormState=1
+FormOnTop=1
 
 [C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas]
 ModuleType=TSourceModule
 FormState=1
 FormOnTop=1
+
+[C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql]
+ModuleType=TSourceModule
+
+[C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas]
+ModuleType=TSourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql]
+ModuleType=TSourceModule
 
 [c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas]
 ModuleType=TSourceModule
@@ -44,9 +69,6 @@ FormOnTop=0
 ModuleType=TSourceModule
 FormState=0
 FormOnTop=0
-
-[C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dproj]
-ModuleType=TBaseProject
 
 [C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas]
 ModuleType=TSourceModule
@@ -63,17 +85,6 @@ ModuleType=TSourceModule
 FormState=1
 FormOnTop=0
 
-[C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql]
-ModuleType=TSourceModule
-
-[C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql]
-ModuleType=TSourceModule
-
-[C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=0
-
 [C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas]
 ModuleType=TSourceModule
 FormState=0
@@ -82,7 +93,7 @@ FormOnTop=0
 [C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql]
 ModuleType=TSourceModule
 
-[C:\Users\andre\projetos\d2010\classes\formularios\ufrmModPageControlWizard.pas]
+[C:\Users\andre\projetos\d2010\classes\FORMULARIOS\UFRMMANUTENCAOBD.pas]
 FormState=1
 FormOnTop=0
 
@@ -94,9 +105,13 @@ FormOnTop=0
 FormState=1
 FormOnTop=0
 
+[C:\Users\andre\projetos\d2010\classes\formularios\ufrmModPageControlWizard.pas]
+FormState=1
+FormOnTop=0
+
 [EditWindow0]
-ViewCount=12
-CurrentEditView=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmPrincipal.pas
+ViewCount=14
+CurrentEditView=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadManifesto.pas
 View0=0
 View1=1
 View2=2
@@ -109,6 +124,8 @@ View8=8
 View9=9
 View10=10
 View11=11
+View12=12
+View13=13
 PercentageSizes=1
 Create=1
 Visible=1
@@ -125,9 +142,9 @@ ClientHeight=9116
 DockedToMainForm=1
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
-LeftPanelSize=2597
+LeftPanelSize=1889
 LeftPanelClients=PropertyInspector
-LeftPanelData=000008000102000000003C1000000000000002082100000000000001000000003C1000001100000050726F7065727479496E73706563746F72FFFFFFFF
+LeftPanelData=0000080001000000000000000000000000000000000000000000000100000000000000001100000050726F7065727479496E73706563746F72FFFFFFFF
 RightPanelSize=0
 BottomPanelSize=0
 BottomPanelClients=DockSite1
@@ -137,7 +154,7 @@ BottomMiddlePanelClients=DockSite0
 BottomMiddelPanelData=0000080001020100000009000000446F636B53697465304C1C000000000000029905000000000000FFFFFFFF
 TabDockLeftClients=CallStackWindow=0,WatchWindow=1,LocalVarsWindow=2
 TabDockBottomClients=MessageView=0
-TabDockRightClients=DockSite2=0
+TabDockRightClients=DockSite2=0,ToolForm=1
 
 [View0]
 CustomEditViewType=TEditView
@@ -152,6 +169,28 @@ EditViewName=Borland.FormDesignerView
 
 [View1]
 CustomEditViewType=TEditView
+Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadResiduo.pas
+CursorX=1
+CursorY=58
+TopLine=37
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View2]
+CustomEditViewType=TEditView
+Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadManifesto.pas
+CursorX=36
+CursorY=711
+TopLine=700
+LeftCol=1
+Elisions=
+Bookmarks={1,715,1}{2,499,1}{3,755,1}
+EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadManifesto.pas
+
+[View3]
+CustomEditViewType=TEditView
 Module=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
 CursorX=9
 CursorY=101
@@ -161,7 +200,7 @@ Elisions=
 Bookmarks={1,89,1}{2,72,1}
 EditViewName=c:\program files\embarcadero\rad studio\7.0\SOURCE\WIN32\VCL\Graphics.pas
 
-[View2]
+[View4]
 CustomEditViewType=TEditView
 Module=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
 CursorX=1
@@ -172,18 +211,18 @@ Elisions=
 Bookmarks=
 EditViewName=c:\program files\embarcadero\rad studio\7.0\source\Win32\rtl\win\Windows.pas
 
-[View3]
+[View5]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
-CursorX=1
-CursorY=1
+CursorX=47
+CursorY=17
 TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=Borland.FormDesignerView
+EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmLoginFerpan.pas
 
-[View4]
+[View6]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
 CursorX=102
@@ -194,18 +233,18 @@ Elisions=
 Bookmarks={0,389,2}{1,647,1}{2,485,1}{3,733,1}{4,542,1}{9,256,1}
 EditViewName=C:\Users\andre\projetos\d2010\classes\formularios\ufrmModeloRelatWizard.pas
 
-[View5]
+[View7]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dpr
-CursorX=1
-CursorY=62
-TopLine=46
+CursorX=63
+CursorY=87
+TopLine=21
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\gestaointegrada.dpr
 
-[View6]
+[View8]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
 CursorX=43
@@ -216,7 +255,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\classes\DBGridUrb.pas
 
-[View7]
+[View9]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
 CursorX=23
@@ -227,7 +266,7 @@ Elisions=
 Bookmarks={1,104,1}
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\ufrmEmissaoFatura.pas
 
-[View8]
+[View10]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\classes\Extensos.pas
 CursorX=10
@@ -238,29 +277,29 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\classes\Extensos.pas
 
-[View9]
+[View11]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
-CursorX=33
-CursorY=55
-TopLine=32
+CursorX=1
+CursorY=220
+TopLine=183
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\migrar_servidor_remoto.sql
 
-[View10]
+[View12]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
-CursorX=1
-CursorY=1
-TopLine=1
+CursorX=25
+CursorY=76
+TopLine=58
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\ajuste_tabela_empresa.sql
 
-[View11]
+[View13]
 CustomEditViewType=TEditView
 Module=C:\Users\andre\projetos\d2010\gestaointegrada\scriptsBD\selects.sql
 CursorX=1
@@ -296,7 +335,8 @@ Dockable=1
 StayOnTop=0
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='C:\Users\andre\projetos\d2010\gestaointegrada\ufrmCadResiduo.pas',58,'',0,1,'',1,0,0,'',1,'','','',0,''
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=0
@@ -329,12 +369,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1889
-Height=1023
+Width=2000
+Height=1419
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1889
-ClientHeight=1023
+ClientWidth=2000
+ClientHeight=1419
 TBDockHeight=7151
 LRDockWidth=1778
 Dockable=1
@@ -363,16 +403,16 @@ StayOnTop=0
 PercentageSizes=1
 Create=1
 Visible=0
-Docked=0
+Docked=1
 State=0
-Left=8493
-Top=4337
-Width=2083
-Height=5605
-MaxLeft=-7
-MaxTop=-12
-ClientWidth=1972
-ClientHeight=5209
+Left=1172
+Top=96
+Width=1688
+Height=7151
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1688
+ClientHeight=7151
 TBDockHeight=7151
 LRDockWidth=1688
 Dockable=1
@@ -592,22 +632,22 @@ Docked=1
 State=0
 Left=0
 Top=23
-Width=2597
+Width=1889
 Height=8581
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2597
+ClientWidth=1889
 ClientHeight=8581
-TBDockHeight=8581
-LRDockWidth=2597
+TBDockHeight=2047
+LRDockWidth=1889
 Dockable=1
 StayOnTop=0
-SplitPos=104
+SplitPos=76
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Color,
-ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=0,GlassFrame=0,HorzScrollBar=0,FilterOptions=0
+SelectedItem=Enabled,OnClick
+ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=0,GlassFrame=0,HorzScrollBar=0,FilterOptions=0,Driver=0,TableScope=0,Margins=0,Padding=0,Touch=0,VertScrollBar=0,FocusControl=0,BevelEdges=0,DataSource=0
 
 [ModelViewTool]
 PercentageSizes=1
@@ -770,19 +810,19 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=1127
+Top=96
 Width=2000
 Height=1419
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1889
-ClientHeight=1023
+ClientWidth=2000
+ClientHeight=1419
 TBDockHeight=1419
 LRDockWidth=2000
 Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=ProjectManager
-TabDockClients=ProjectManager,ModelViewTool,DataExplorer
+TabDockClients=ProjectManager,DataExplorer,ModelViewTool
 

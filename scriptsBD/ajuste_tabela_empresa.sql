@@ -142,3 +142,12 @@ SET Telefone   = "2227962100",
     Email      = "contato@ferpan.com.br"
 WHERE  ID_Empresa IN (370, 517, 436, 116);
 
+
+/*------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+ALTER TABLE `ferpan`.`empresa` CHANGE COLUMN `InscEstado` `InscEstado` VARCHAR(12) NULL DEFAULT NULL;
+INSERT INTO `ferpan`.`empresa` (`ID_Empresa`, `RazaoSocial`, `ID_Classificacao`, `Endereco`, `Municipio`, `UF`, `Telefone`, `ValorContrato`, `ValorTonelada`, `FlagRelContaminado`, `FlagRelReciclavel`, `FlagRelSucata`, `TipoResumoGeral`, `Responsavel`, `ID_Fantasia`, `CEP`, `CNPJ`, `InscEstado`) VALUES (0, 'Altemar J Camilo E Cia Ltda - ME', 1, 'Rua Arapongas, 222', 'Foz do Iguaçu', 'PR', '4540539061', '1', '1', 'F', 'F', 'F', 1, 'A', 187, '85859470', '07371039000164', '9033776230');
+INSERT INTO `ferpan`.`fantasia` (`ID_Fantasia`, `Descricao`) VALUES (0, 'Altemar J Camilo E Cia Ltda - ME');
+/*------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+

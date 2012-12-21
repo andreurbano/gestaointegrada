@@ -48,8 +48,6 @@ type
     dblEstadoFisico: TDBLookupComboBox;
     lblAcond: TLabel;
     dblAcond: TDBLookupComboBox;
-    lblOrigem: TLabel;
-    dblOrigem: TDBLookupComboBox;
     lblProcedencia: TLabel;
     dblProcedencia: TDBLookupComboBox;
     lblTratDisp: TLabel;
@@ -112,7 +110,6 @@ type
     btnCadTipo: TSpeedButton;
     btnCadEstadoFisico: TSpeedButton;
     btnCadAcond: TSpeedButton;
-    btnCadOrigem: TSpeedButton;
     btnCadProcedencia: TSpeedButton;
     btnTratDisp: TSpeedButton;
     btnCadStatus: TSpeedButton;
@@ -378,6 +375,27 @@ type
     N2ViaAssinada1: TMenuItem;
     AssinadapeloReceptor1: TMenuItem;
     DocumentoinicialFCDS1: TMenuItem;
+    sqlManuBDCod_Residuo: TStringField;
+    cdsManuBDCod_Residuo: TStringField;
+    cdsResiduoID_Residuo: TIntegerField;
+    cdsResiduoDescricao: TStringField;
+    cdsResiduoFlagContaminado: TStringField;
+    cdsResiduoValorMercado: TFMTBCDField;
+    cdsResiduoCodigo: TStringField;
+    gbxOrigem: TGroupBox;
+    dblOrigem: TDBLookupComboBox;
+    btnCadOrigem: TSpeedButton;
+    lblOrigemSelecione: TLabel;
+    lblOrigemOutros: TLabel;
+    txtOrigemOutros: TDBEdit;
+    sqlManuBDOrigem_Outros: TStringField;
+    sqlManuBDAcond_Outros: TStringField;
+    sqlManuBDProcedencia_Outros: TStringField;
+    sqlManuBDTratDisp_Outros: TStringField;
+    cdsManuBDOrigem_Outros: TStringField;
+    cdsManuBDAcond_Outros: TStringField;
+    cdsManuBDProcedencia_Outros: TStringField;
+    cdsManuBDTratDisp_Outros: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure btnCadTipoClick(Sender: TObject);
     procedure dblTipoEnter(Sender: TObject);
@@ -418,6 +436,8 @@ type
     procedure dblstatusClick(Sender: TObject);
     procedure btnVisualizarClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
+    procedure cdsManuBDBeforePost(DataSet: TDataSet);
+    procedure dblOrigemClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -453,11 +473,20 @@ const
 
 implementation
 
-uses ufrmCadResiduo, ufrmCadEstadoFisico, ufrmCadAcond, ufrmCadOrigem,
-  ufrmCadProcedencia, ufrmCadTratDisp, ufrmCadManifestoEstado,
-  ufrmCadUnidadeMedida, ufrmCadEmpresa, ufrmCadResponsavel,
-  ufrmRelatMensal, DateUtils, ufrmPrincipal,
-  ufrmCadManifestoAlteraSituacao;
+uses ufrmCadResiduo,
+     ufrmCadEstadoFisico,
+     ufrmCadAcond,
+     ufrmCadOrigem,
+     ufrmCadProcedencia,
+     ufrmCadTratDisp,
+     ufrmCadManifestoEstado,
+     ufrmCadUnidadeMedida,
+     ufrmCadEmpresa,
+     ufrmCadResponsavel,
+     ufrmRelatMensal,
+     DateUtils,
+     ufrmPrincipal,
+     ufrmCadManifestoAlteraSituacao;
 
 {$R *.dfm}
 
@@ -475,7 +504,7 @@ begin
 
   //
   cdsResiduo.Active               := False;
-  sqlResiduo.CommandText          := ' select ID_Residuo, Descricao, FlagContaminado, ValorMercado from residuo order by Descricao ';
+  sqlResiduo.CommandText          := ' select ID_Residuo, Descricao, FlagContaminado, ValorMercado, Codigo from residuo order by Descricao ';
   cdsResiduo.Active               := True;
   //
   cdsEstadoFisico.Active          := False;
@@ -576,6 +605,7 @@ begin
                            '        Quantidade, '           +
                            '        ID_Unidade,'            +
                            '        ID_Residuo, '           +
+                           '        Cod_Residuo, '          +
                            '        ID_EstadoFisico, '      +
                            '        ID_Acond, '             +
                            '        ID_Origem, '            +
@@ -604,9 +634,12 @@ begin
                            '        TransResponsavel, '     +
                            '        RecepResponsavel, '     +
                            '        CDF, '                  +
-                           '        Obs '                   +
+                           '        Obs, '                  +
+                           '        Origem_Outros, '        +
+                           '        Acond_Outros, '         +
+                           '        Procedencia_Outros, '   +
+                           '        TratDisp_Outros '       +
                            ' from   manifesto '             +
-
                            ' where  (ID_Situacao   = :iID_Situacao) and ' +
                            '        (GerDtEntrega >= :sDtChegouIni) and ' +
                            '        (GerDtEntrega <= :sDtChegouFim) ';
@@ -675,6 +708,24 @@ begin
   Application.CreateForm(TfrmCadOrigem, frmCadOrigem);
 end;
 
+procedure TfrmCadManifesto.dblOrigemClick(Sender: TObject);
+begin
+  inherited;
+ if cdsManuBDID_Origem.AsInteger = 1 then
+ begin
+   lblOrigemOutros.Enabled := True;
+   txtOrigemOutros.Enabled := True;
+   txtOrigemOutros.Color   := clWindow;
+ end
+ else
+ begin
+   lblOrigemOutros.Enabled := False;
+   txtOrigemOutros.Enabled := False;
+   txtOrigemOutros.Color   := $00E3E3E3;
+   cdsManuBDOrigem_Outros.Value := '';
+ end;
+end;
+
 procedure TfrmCadManifesto.dblOrigemEnter(Sender: TObject);
 begin
   inherited;
@@ -710,6 +761,12 @@ begin
 //  ppmVisualizar.Popup(Mouse.CursorPos.x, Mouse.Cursorpos.y);
 
 
+end;
+
+procedure TfrmCadManifesto.cdsManuBDBeforePost(DataSet: TDataSet);
+begin
+  inherited;
+  cdsManuBDCod_Residuo.AsString := cdsResiduo.FieldByName('Codigo').AsString;
 end;
 
 procedure TfrmCadManifesto.dblTratDispEnter(Sender: TObject);
@@ -789,44 +846,43 @@ begin
   inherited;
   //
   Screen.Cursor := crSQLWait;
-
   //
-  cdsResiduo.Active           := False;
-  sqlResiduo.CommandText      := ' select ID_Residuo, Descricao, FlagContaminado, ValorMercado from residuo order by Descricao ';
-  cdsResiduo.Active           := True;
+  cdsResiduo.Active               := False;
+  sqlResiduo.CommandText          := ' select ID_Residuo, Descricao, FlagContaminado, ValorMercado, Codigo from residuo order by Descricao ';
+  cdsResiduo.Active               := True;
   //
-  cdsEstadoFisico.Active      := False;
-  sqlEstadoFisico.CommandText := ' select ID_EstadoFisico, Descricao from estadofisico order by Descricao ';
-  cdsEstadoFisico.Active      := True;
+  cdsEstadoFisico.Active          := False;
+  sqlEstadoFisico.CommandText     := ' select ID_EstadoFisico, Descricao from estadofisico order by Descricao ';
+  cdsEstadoFisico.Active          := True;
   //
-  cdsAcond.Active             := False;
-  sqlAcond.CommandText        := ' select ID_Acondicionamento, Descricao from acondicionamento order by Descricao ';
-  cdsAcond.Active             := True;
+  cdsAcond.Active                 := False;
+  sqlAcond.CommandText            := ' select ID_Acondicionamento, Descricao from acondicionamento order by Descricao ';
+  cdsAcond.Active                 := True;
   //
-  cdsOrigem.Active            := False;
-  sqlOrigem.CommandText       := ' select ID_Origem, Descricao from origem order by Descricao ';
-  cdsOrigem.Active            := True;
+  cdsOrigem.Active                := False;
+  sqlOrigem.CommandText           := ' select ID_Origem, Descricao from origem order by Descricao ';
+  cdsOrigem.Active                := True;
   //
-  cdsProcedencia.Active       := False;
-  sqlProcedencia.CommandText  := ' select ID_Procedencia, Descricao from procedencia order by Descricao ';
-  cdsProcedencia.Active       := True;
+  cdsProcedencia.Active           := False;
+  sqlProcedencia.CommandText      := ' select ID_Procedencia, Descricao from procedencia order by Descricao ';
+  cdsProcedencia.Active           := True;
   //
-  cdsTratDisp.Active          := False;
-  sqlTratDisp.CommandText     := ' select ID_TratDisp, Descricao from tratdisp order by Descricao ';
-  cdsTratDisp.Active          := True;
+  cdsTratDisp.Active              := False;
+  sqlTratDisp.CommandText         := ' select ID_TratDisp, Descricao from tratdisp order by Descricao ';
+  cdsTratDisp.Active              := True;
   //
   //
-  cdsGerCargo.Active            := False;
-  sqlGerCargo.CommandText       := sSQL_Cargo;
-  cdsGerCargo.Active            := True;
+  cdsGerCargo.Active              := False;
+  sqlGerCargo.CommandText         := sSQL_Cargo;
+  cdsGerCargo.Active              := True;
   //
-  cdsGerResponsavel.Active      := False;
-  sqlGerResponsavel.CommandText := sSQL_Responsavel;
-  cdsGerResponsavel.Active      := True;
+  cdsGerResponsavel.Active        := False;
+  sqlGerResponsavel.CommandText   := sSQL_Responsavel;
+  cdsGerResponsavel.Active        := True;
   //
-  cdsGerEmpresa.Active        := False;
-  sqlGerEmpresa.CommandText   := sSQL_Empresa;
-  cdsGerEmpresa.Active        := True;
+  cdsGerEmpresa.Active            := False;
+  sqlGerEmpresa.CommandText       := sSQL_Empresa;
+  cdsGerEmpresa.Active            := True;
   //
   cdsTransCargo.Active            := False;
   sqlTransCargo.CommandText       := sSQL_Cargo;
@@ -836,9 +892,9 @@ begin
   sqlTransResponsavel.CommandText := sSQL_Responsavel;
   cdsTransResponsavel.Active      := True;
   //
-  cdsTransEmpresa.Active        := False;
-  sqlTransEmpresa.CommandText   := sSQL_Empresa;
-  cdsTransEmpresa.Active        := True;
+  cdsTransEmpresa.Active          := False;
+  sqlTransEmpresa.CommandText     := sSQL_Empresa;
+  cdsTransEmpresa.Active          := True;
   //
   cdsRecepCargo.Active            := False;
   sqlRecepCargo.CommandText       := sSQL_Cargo;
@@ -891,9 +947,6 @@ end;
 procedure TfrmCadManifesto.N1Click(Sender: TObject);
 begin
   inherited;
-
-
-
   frmPrincipal.rvpGestao_Empresarial.ExecuteReport('rptManifesto');
 end;
 

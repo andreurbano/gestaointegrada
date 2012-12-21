@@ -4,45 +4,46 @@ inherited frmCadManifesto: TfrmCadManifesto
   Anchors = [akLeft, akTop, akBottom]
   BorderIcons = [biSystemMenu, biMinimize, biMaximize]
   Caption = 'Cadastro de Manifesto de Res'#237'duos'
-  ClientHeight = 490
+  ClientHeight = 547
   ClientWidth = 999
   ExplicitWidth = 1015
-  ExplicitHeight = 528
+  ExplicitHeight = 585
   DesignSize = (
     999
-    490)
+    547)
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlManutencaoBD: TPanel
     Top = 0
     Width = 909
-    Height = 456
+    Height = 513
     ExplicitTop = 0
     ExplicitWidth = 909
-    ExplicitHeight = 571
+    ExplicitHeight = 513
     DesignSize = (
       909
-      456)
+      513)
     inherited pgcManutencaoBD: TPageControl
       Width = 889
-      Height = 438
-      ActivePage = tbsListagem
+      Height = 495
       ExplicitWidth = 889
-      ExplicitHeight = 438
+      ExplicitHeight = 495
       inherited tbsListagem: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
         ExplicitWidth = 881
-        ExplicitHeight = 428
+        ExplicitHeight = 485
         inherited pnlListagem: TPanel
           Width = 881
-          Height = 428
+          Height = 485
           Color = 13429977
           ParentBackground = False
           ExplicitWidth = 881
-          ExplicitHeight = 428
+          ExplicitHeight = 485
           inherited dbgManutencaoBD: TDBGridUrb
             Top = 73
             Width = 872
-            Height = 349
+            Height = 406
           end
         end
         object gbxPeriodo: TGroupBox
@@ -180,18 +181,20 @@ inherited frmCadManifesto: TfrmCadManifesto
         end
       end
       inherited tbsCadastro: TTabSheet
+        ExplicitLeft = 4
+        ExplicitTop = 6
         ExplicitWidth = 881
-        ExplicitHeight = 428
+        ExplicitHeight = 485
         inherited pnlCadastro: TPanel
           Width = 881
-          Height = 428
+          Height = 485
           ExplicitWidth = 881
-          ExplicitHeight = 428
+          ExplicitHeight = 485
           object pgcManifesto: TPageControl
             Left = 8
             Top = 12
             Width = 865
-            Height = 404
+            Height = 461
             ActivePage = tshResiduo
             Anchors = [akLeft, akTop, akRight, akBottom]
             Style = tsButtons
@@ -200,7 +203,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               Caption = '&Res'#237'duo'
               DesignSize = (
                 857
-                373)
+                430)
               object lblNumero: TLabel
                 Left = 400
                 Top = 102
@@ -233,7 +236,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object lblQtde: TLabel
                 Left = 3
-                Top = 131
+                Top = 176
                 Width = 26
                 Height = 13
                 Caption = 'Qtde.'
@@ -265,7 +268,6 @@ inherited frmCadManifesto: TfrmCadManifesto
                 Width = 50
                 Height = 13
                 Caption = 'Est. F'#237'sico'
-                Enabled = False
                 FocusControl = dblEstadoFisico
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -280,23 +282,7 @@ inherited frmCadManifesto: TfrmCadManifesto
                 Width = 34
                 Height = 13
                 Caption = 'Acond.'
-                Enabled = False
                 FocusControl = dblAcond
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'MS Sans Serif'
-                Font.Style = []
-                ParentFont = False
-              end
-              object lblOrigem: TLabel
-                Left = 3
-                Top = 102
-                Width = 33
-                Height = 13
-                Caption = 'Origem'
-                Enabled = False
-                FocusControl = dblOrigem
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
@@ -324,7 +310,6 @@ inherited frmCadManifesto: TfrmCadManifesto
                 Width = 51
                 Height = 13
                 Caption = 'Trat./Disp.'
-                Enabled = False
                 FocusControl = dblTratDisp
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -335,7 +320,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object lblUnidade: TLabel
                 Left = 249
-                Top = 131
+                Top = 176
                 Width = 40
                 Height = 13
                 Caption = 'Unidade'
@@ -362,38 +347,33 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object btnCadTipo: TSpeedButton
                 Left = 378
-                Top = 11
+                Top = 10
                 Width = 21
                 Height = 21
                 Hint = 'Cadastro de Tipo de Res'#237'duo'
                 Caption = '...'
-                Flat = True
                 ParentShowHint = False
                 ShowHint = True
                 OnClick = btnCadTipoClick
               end
               object btnCadEstadoFisico: TSpeedButton
                 Left = 378
-                Top = 38
+                Top = 37
                 Width = 21
                 Height = 21
                 Hint = 'Cadastro de Estado F'#237'sico'
                 Caption = '...'
-                Enabled = False
-                Flat = True
                 ParentShowHint = False
                 ShowHint = True
                 OnClick = btnCadEstadoFisicoClick
               end
               object btnCadAcond: TSpeedButton
                 Left = 378
-                Top = 65
+                Top = 66
                 Width = 21
                 Height = 21
                 Hint = 'Cadastro de Acondicionamento'
                 Caption = '...'
-                Enabled = False
-                Flat = True
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
@@ -403,19 +383,6 @@ inherited frmCadManifesto: TfrmCadManifesto
                 ParentShowHint = False
                 ShowHint = True
                 OnClick = btnCadAcondClick
-              end
-              object btnCadOrigem: TSpeedButton
-                Left = 378
-                Top = 96
-                Width = 21
-                Height = 21
-                Hint = 'Cadastro de Origem'
-                Caption = '...'
-                Enabled = False
-                Flat = True
-                ParentShowHint = False
-                ShowHint = True
-                OnClick = btnCadOrigemClick
               end
               object btnCadProcedencia: TSpeedButton
                 Left = 828
@@ -462,7 +429,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object btnCadUnidade: TSpeedButton
                 Left = 378
-                Top = 123
+                Top = 168
                 Width = 21
                 Height = 21
                 Hint = 'Cadastro de Unidade de Medida'
@@ -504,7 +471,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object lblSituacao: TLabel
                 Left = 3
-                Top = 160
+                Top = 205
                 Width = 42
                 Height = 13
                 Caption = 'Situa'#231#227'o'
@@ -534,7 +501,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object lblObs: TLabel
                 Left = 3
-                Top = 344
+                Top = 401
                 Width = 19
                 Height = 13
                 Anchors = [akLeft, akBottom]
@@ -582,7 +549,7 @@ inherited frmCadManifesto: TfrmCadManifesto
                 CharCase = ecUpperCase
                 DataField = 'Numero'
                 DataSource = dtsManuBD
-                TabOrder = 7
+                TabOrder = 6
               end
               object txtNumCertificado: TDBEdit
                 Left = 764
@@ -594,16 +561,16 @@ inherited frmCadManifesto: TfrmCadManifesto
                 DataField = 'NumCertificado'
                 DataSource = dtsManuBD
                 Enabled = False
-                TabOrder = 8
+                TabOrder = 7
               end
               object dblQtde: TDBEdit
                 Left = 75
-                Top = 123
+                Top = 168
                 Width = 164
                 Height = 21
                 DataField = 'Quantidade'
                 DataSource = dtsManuBD
-                TabOrder = 9
+                TabOrder = 8
               end
               object dblTipo: TDBLookupComboBox
                 Left = 75
@@ -635,16 +602,6 @@ inherited frmCadManifesto: TfrmCadManifesto
                 TabOrder = 4
                 OnEnter = dblAcondEnter
               end
-              object dblOrigem: TDBLookupComboBox
-                Left = 75
-                Top = 94
-                Width = 303
-                Height = 21
-                DataField = 'DescOrigem'
-                DataSource = dtsManuBD
-                TabOrder = 6
-                OnEnter = dblOrigemEnter
-              end
               object dblProcedencia: TDBLookupComboBox
                 Left = 466
                 Top = 10
@@ -669,12 +626,12 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object dblUnidade: TDBLookupComboBox
                 Left = 303
-                Top = 123
+                Top = 168
                 Width = 75
                 Height = 21
                 DataField = 'DescUnidade'
                 DataSource = dtsManuBD
-                TabOrder = 10
+                TabOrder = 9
                 OnEnter = dblUnidadeEnter
               end
               object dblstatus: TDBLookupComboBox
@@ -691,16 +648,16 @@ inherited frmCadManifesto: TfrmCadManifesto
               end
               object memObs: TDBMemo
                 Left = 75
-                Top = 181
+                Top = 224
                 Width = 753
-                Height = 177
+                Height = 191
                 Hint = 'Observa'#231#227'o'
                 Anchors = [akLeft, akTop, akRight, akBottom]
                 DataField = 'Obs'
                 DataSource = dtsManuBD
                 ParentShowHint = False
                 ShowHint = True
-                TabOrder = 16
+                TabOrder = 15
               end
               object txtDtChegou: TDBEdit
                 Left = 466
@@ -709,7 +666,7 @@ inherited frmCadManifesto: TfrmCadManifesto
                 Height = 21
                 DataField = 'DtChegou'
                 DataSource = dtsManuBD
-                TabOrder = 11
+                TabOrder = 10
               end
               object txtDtEnvio: TDBEdit
                 Left = 764
@@ -721,18 +678,18 @@ inherited frmCadManifesto: TfrmCadManifesto
                 DataField = 'DtEnvio'
                 DataSource = dtsManuBD
                 ReadOnly = True
-                TabOrder = 12
+                TabOrder = 11
               end
               object txtSituacao: TDBEdit
                 Left = 75
-                Top = 152
+                Top = 197
                 Width = 303
                 Height = 21
                 Color = cl3DLight
                 DataField = 'DescSituacao'
                 DataSource = dtsManuBD
                 ReadOnly = True
-                TabOrder = 13
+                TabOrder = 12
               end
               object txtLote: TDBEdit
                 Left = 764
@@ -744,7 +701,7 @@ inherited frmCadManifesto: TfrmCadManifesto
                 DataField = 'ID_LoteEnvio'
                 DataSource = dtsManuBD
                 ReadOnly = True
-                TabOrder = 15
+                TabOrder = 14
               end
               object txtCDF: TDBEdit
                 Left = 466
@@ -753,7 +710,74 @@ inherited frmCadManifesto: TfrmCadManifesto
                 Height = 21
                 DataField = 'CDF'
                 DataSource = dtsManuBD
-                TabOrder = 14
+                TabOrder = 13
+              end
+              object gbxOrigem: TGroupBox
+                Left = 3
+                Top = 90
+                Width = 375
+                Height = 68
+                TabOrder = 16
+                object btnCadOrigem: TSpeedButton
+                  Left = 348
+                  Top = 10
+                  Width = 21
+                  Height = 21
+                  Hint = 'Cadastro de Origem'
+                  Caption = '...'
+                  ParentShowHint = False
+                  ShowHint = True
+                  OnClick = btnCadOrigemClick
+                end
+                object lblOrigemSelecione: TLabel
+                  Left = 14
+                  Top = 18
+                  Width = 33
+                  Height = 13
+                  Caption = 'Origem'
+                  FocusControl = dblAcond
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'MS Sans Serif'
+                  Font.Style = []
+                  ParentFont = False
+                end
+                object lblOrigemOutros: TLabel
+                  Left = 14
+                  Top = 47
+                  Width = 31
+                  Height = 13
+                  Caption = 'Outros'
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -11
+                  Font.Name = 'MS Sans Serif'
+                  Font.Style = []
+                  ParentFont = False
+                end
+                object dblOrigem: TDBLookupComboBox
+                  Left = 72
+                  Top = 10
+                  Width = 274
+                  Height = 21
+                  DataField = 'DescOrigem'
+                  DataSource = dtsManuBD
+                  TabOrder = 0
+                  OnClick = dblOrigemClick
+                  OnEnter = dblOrigemEnter
+                end
+                object txtOrigemOutros: TDBEdit
+                  Left = 72
+                  Top = 39
+                  Width = 274
+                  Height = 21
+                  Color = 14935011
+                  DataField = 'Origem_Outros'
+                  DataSource = dtsManuBD
+                  TabOrder = 1
+                end
               end
             end
             object TabSheet2: TTabSheet
@@ -761,7 +785,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               ImageIndex = 1
               DesignSize = (
                 857
-                373)
+                430)
               object lblGerEmpresa: TLabel
                 Left = 151
                 Top = 18
@@ -1016,7 +1040,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               OnEnter = TabSheet3Enter
               DesignSize = (
                 857
-                373)
+                430)
               object Label29: TLabel
                 Left = 3
                 Top = 130
@@ -1323,7 +1347,7 @@ inherited frmCadManifesto: TfrmCadManifesto
               OnEnter = TabSheet4Enter
               DesignSize = (
                 857
-                373)
+                430)
               object Label31: TLabel
                 Left = 151
                 Top = 18
@@ -1553,7 +1577,7 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
   end
   inherited stbManutencaoBD: TStatusBar
-    Top = 471
+    Top = 528
     Width = 999
     Panels = <
       item
@@ -1562,16 +1586,16 @@ inherited frmCadManifesto: TfrmCadManifesto
       item
         Width = 50
       end>
-    ExplicitTop = 586
+    ExplicitTop = 528
     ExplicitWidth = 999
   end
   inherited pnlBotoes: TPanel
     Left = 918
     Top = 0
-    Height = 456
+    Height = 513
     ExplicitLeft = 918
     ExplicitTop = 0
-    ExplicitHeight = 571
+    ExplicitHeight = 513
     object SpeedButton6: TSpeedButton
       Left = 6
       Top = 230
@@ -1593,7 +1617,7 @@ inherited frmCadManifesto: TfrmCadManifesto
   inherited imgManutencaoBD: TImageList
     Left = 806
     Bitmap = {
-      494C01010A000C0050001A001A00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010A000C0068001A001A00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000680000004E0000000100200000000000C07E
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2657,41 +2681,43 @@ inherited frmCadManifesto: TfrmCadManifesto
     AggregatesActive = True
     Params = <
       item
-        DataType = ftString
+        DataType = ftInteger
         Name = 'iID_Situacao'
         ParamType = ptUnknown
-        Value = '2'
+        Value = 2
       end
       item
         DataType = ftString
         Name = 'sDtChegouIni'
         ParamType = ptUnknown
-        Value = #39'20120101'#39
+        Value = '20121201'
       end
       item
         DataType = ftString
         Name = 'sDtChegouFim'
         ParamType = ptUnknown
-        Value = #39'20120402'#39
+        Value = '20121213'
       end>
+    BeforePost = cdsManuBDBeforePost
     Left = 98
     Top = 338
     object cdsManuBDNumero: TStringField
       DisplayLabel = 'N'#186
+      DisplayWidth = 24
       FieldName = 'Numero'
-      ProviderFlags = [pfInWhere, pfInKey]
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object cdsManuBDGerDtEntrega: TSQLTimeStampField
       DisplayLabel = 'Dt. Entrega'
-      DisplayWidth = 13
+      DisplayWidth = 16
       FieldName = 'GerDtEntrega'
       DisplayFormat = 'dd/mm/yyyy'
       EditMask = '!99/99/0000;1;_'
     end
     object cdsManuBDDescGerEmpresa: TStringField
       DisplayLabel = 'Gerador'
-      DisplayWidth = 43
+      DisplayWidth = 52
       FieldKind = fkLookup
       FieldName = 'DescGerEmpresa'
       LookupDataSet = cdsGerEmpresa
@@ -2703,7 +2729,7 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
     object cdsManuBDDescProcedencia: TStringField
       DisplayLabel = 'Proced'#234'cia'
-      DisplayWidth = 21
+      DisplayWidth = 25
       FieldKind = fkLookup
       FieldName = 'DescProcedencia'
       LookupDataSet = cdsProcedencia
@@ -2715,19 +2741,19 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
     object cdsManuBDDescResiduo: TStringField
       DisplayLabel = 'Tipo de Res'#237'duo'
-      DisplayWidth = 23
+      DisplayWidth = 50
       FieldKind = fkLookup
       FieldName = 'DescResiduo'
       LookupDataSet = cdsResiduo
       LookupKeyFields = 'ID_Residuo'
       LookupResultField = 'Descricao'
       KeyFields = 'ID_Residuo'
-      Size = 30
+      Size = 50
       Lookup = True
     end
     object cdsManuBDQuantidade: TFMTBCDField
       DisplayLabel = 'Qtde.'
-      DisplayWidth = 12
+      DisplayWidth = 15
       FieldName = 'Quantidade'
       DisplayFormat = '#####0.00#'
       Precision = 17
@@ -2735,7 +2761,7 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
     object cdsManuBDDescUnidade: TStringField
       DisplayLabel = 'Un'
-      DisplayWidth = 6
+      DisplayWidth = 7
       FieldKind = fkLookup
       FieldName = 'DescUnidade'
       LookupDataSet = cdsUnidadeMedida
@@ -2747,7 +2773,7 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
     object cdsManuBDDescRecepEmpresa: TStringField
       DisplayLabel = 'Receptor'
-      DisplayWidth = 43
+      DisplayWidth = 52
       FieldKind = fkLookup
       FieldName = 'DescRecepEmpresa'
       LookupDataSet = cdsRecepEmpresa
@@ -2759,14 +2785,14 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
     object cdsManuBDRecepDtReceb: TSQLTimeStampField
       DisplayLabel = 'Dt. Receb.'
-      DisplayWidth = 13
+      DisplayWidth = 16
       FieldName = 'RecepDtReceb'
       DisplayFormat = 'dd/mm/yyyy'
       EditMask = '!99/99/0000;1;_'
     end
     object cdsManuBDDescStatus: TStringField
       DisplayLabel = 'Status'
-      DisplayWidth = 29
+      DisplayWidth = 35
       FieldKind = fkLookup
       FieldName = 'DescStatus'
       LookupDataSet = cdsStatus
@@ -2778,18 +2804,18 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
     object cdsManuBDDtChegou: TSQLTimeStampField
       DisplayLabel = 'Dt. Chegou'
-      DisplayWidth = 13
+      DisplayWidth = 16
       FieldName = 'DtChegou'
       Required = True
     end
     object cdsManuBDDtEnvio: TSQLTimeStampField
       DisplayLabel = 'Dt. Envio'
-      DisplayWidth = 12
+      DisplayWidth = 15
       FieldName = 'DtEnvio'
     end
     object cdsManuBDID_LoteEnvio: TIntegerField
       DisplayLabel = 'N'#186' Lote'
-      DisplayWidth = 19
+      DisplayWidth = 23
       FieldName = 'ID_LoteEnvio'
     end
     object cdsManuBDRecepID_Empresa: TIntegerField
@@ -2930,7 +2956,6 @@ inherited frmCadManifesto: TfrmCadManifesto
     object cdsManuBDID_EstadoFisico: TIntegerField
       DisplayWidth = 19
       FieldName = 'ID_EstadoFisico'
-      Visible = False
     end
     object cdsManuBDID_Acond: TIntegerField
       DisplayWidth = 12
@@ -3057,7 +3082,29 @@ inherited frmCadManifesto: TfrmCadManifesto
       Size = 50
     end
     object cdsManuBDCDF: TStringField
+      DisplayWidth = 54
       FieldName = 'CDF'
+      Size = 45
+    end
+    object cdsManuBDCod_Residuo: TStringField
+      FieldName = 'Cod_Residuo'
+      Required = True
+      Size = 4
+    end
+    object cdsManuBDOrigem_Outros: TStringField
+      FieldName = 'Origem_Outros'
+      Size = 45
+    end
+    object cdsManuBDAcond_Outros: TStringField
+      FieldName = 'Acond_Outros'
+      Size = 45
+    end
+    object cdsManuBDProcedencia_Outros: TStringField
+      FieldName = 'Procedencia_Outros'
+      Size = 45
+    end
+    object cdsManuBDTratDisp_Outros: TStringField
+      FieldName = 'TratDisp_Outros'
       Size = 45
     end
   end
@@ -3107,43 +3154,46 @@ inherited frmCadManifesto: TfrmCadManifesto
     SchemaName = 'andre'
     CommandText = 
       'select '#13#10#9#9'm.Numero, '#13#10#9#9'm.NumCertificado, '#13#10#9#9'm.Quantidade, '#13#10#9 +
-      #9'm.ID_Unidade, '#13#10#9#9'm.ID_Residuo, '#13#10#9#9'm.ID_EstadoFisico, '#13#10#9#9'm.ID' +
-      '_Acond,         '#13#10#9#9'm.ID_Origem, '#13#10#9#9'm.ID_Procedencia, '#13#10#9#9'm.ID_' +
-      'TratDisp, '#13#10#9#9'm.ID_Status, '#13#10#9#9'm.GerDtEntrega, '#13#10#9#9'm.GerID_Empre' +
-      'sa,         '#13#10#9#9'm.GerNumInventario, '#13#10#9#9'm.GerID_Responsavel, '#13#10#9 +
-      #9'm.TransDtReceb, '#13#10#9#9'm.TransID_Empresa, '#13#10#9#9'm.TransID_Responsave' +
-      'l,         '#13#10#9#9'm.TransNomeMotorista, '#13#10#9#9'm.TransPlacaVeiculo, '#13#10 +
-      #9#9'm.TransCertificado, '#13#10#9#9'm.RecepDtReceb, '#13#10#9#9'm.RecepID_Empresa,' +
-      '         '#13#10#9#9'm.RecepNumInventario, '#13#10#9#9'm.RecepID_Responsavel, '#13#10 +
-      #9#9'm.DtChegou, '#13#10#9#9'm.DtEnvio, '#13#10#9#9'm.ID_Situacao, '#13#10#9#9'm.ID_LoteEnv' +
-      'io,         '#13#10#9#9'm.GerResponsavel, '#13#10#9#9'm.TransResponsavel, '#13#10#9#9'm.' +
-      'RecepResponsavel, '#13#10#9#9'm.CDF, '#13#10'                               m.' +
-      'Obs  '#13#10'from    manifesto m'#13#10'where  (ID_Situacao   = :iID_Situaca' +
-      'o) and '#13#10'            (GerDtEntrega >= :sDtChegouIni) and '#13#10'     ' +
-      '       (GerDtEntrega <= :sDtChegouFim)'
+      #9'm.ID_Unidade, '#13#10#9#9'm.ID_Residuo, '#13#10'                             ' +
+      '   m.Cod_Residuo,'#13#10#9#9'm.ID_EstadoFisico, '#13#10#9#9'm.ID_Acond,         ' +
+      #13#10#9#9'm.ID_Origem, '#13#10#9#9'm.ID_Procedencia, '#13#10#9#9'm.ID_TratDisp, '#13#10#9#9'm.' +
+      'ID_Status, '#13#10#9#9'm.GerDtEntrega, '#13#10#9#9'm.GerID_Empresa,         '#13#10#9#9 +
+      'm.GerNumInventario, '#13#10#9#9'm.GerID_Responsavel, '#13#10#9#9'm.TransDtReceb,' +
+      ' '#13#10#9#9'm.TransID_Empresa, '#13#10#9#9'm.TransID_Responsavel,         '#13#10#9#9'm' +
+      '.TransNomeMotorista, '#13#10#9#9'm.TransPlacaVeiculo, '#13#10#9#9'm.TransCertifi' +
+      'cado, '#13#10#9#9'm.RecepDtReceb, '#13#10#9#9'm.RecepID_Empresa,         '#13#10#9#9'm.R' +
+      'ecepNumInventario, '#13#10#9#9'm.RecepID_Responsavel, '#13#10#9#9'm.DtChegou, '#13#10 +
+      #9#9'm.DtEnvio, '#13#10#9#9'm.ID_Situacao, '#13#10#9#9'm.ID_LoteEnvio,         '#13#10#9#9 +
+      'm.GerResponsavel, '#13#10#9#9'm.TransResponsavel, '#13#10#9#9'm.RecepResponsavel' +
+      ', '#13#10#9#9'm.CDF, '#13#10'                                m.Obs,'#13#10'         ' +
+      '                       m.Origem_Outros,'#13#10'                       ' +
+      '         m.Acond_Outros,'#13#10'                                m.Proc' +
+      'edencia_Outros,'#13#10'                                m.TratDisp_Outr' +
+      'os'#13#10'from    manifesto m'#13#10'where   (m.ID_Situacao   = :iID_Situaca' +
+      'o) and '#13#10'        (m.GerDtEntrega >= :sDtChegouIni) and '#13#10'       ' +
+      ' (m.GerDtEntrega <= :sDtChegouFim)'
     MaxBlobSize = 1
     ParamCheck = False
     Params = <
       item
-        DataType = ftString
+        DataType = ftInteger
         Name = 'iID_Situacao'
         ParamType = ptInput
-        Size = 2
-        Value = '2'
+        Value = 2
       end
       item
         DataType = ftString
         Name = 'sDtChegouIni'
         ParamType = ptInput
-        Size = 11
-        Value = #39'20120101'#39
+        Size = 9
+        Value = '20121201'
       end
       item
         DataType = ftString
         Name = 'sDtChegouFim'
         ParamType = ptInput
-        Size = 11
-        Value = #39'20120402'#39
+        Size = 9
+        Value = '20121213'
       end>
     Left = 42
     Top = 338
@@ -3401,7 +3451,6 @@ inherited frmCadManifesto: TfrmCadManifesto
     object sqlManuBDID_EstadoFisico: TIntegerField
       DisplayWidth = 19
       FieldName = 'ID_EstadoFisico'
-      Visible = False
     end
     object sqlManuBDID_Acond: TIntegerField
       DisplayWidth = 12
@@ -3531,117 +3580,172 @@ inherited frmCadManifesto: TfrmCadManifesto
       FieldName = 'CDF'
       Size = 45
     end
+    object sqlManuBDCod_Residuo: TStringField
+      FieldName = 'Cod_Residuo'
+      Required = True
+      Size = 4
+    end
+    object sqlManuBDOrigem_Outros: TStringField
+      FieldName = 'Origem_Outros'
+      Size = 45
+    end
+    object sqlManuBDAcond_Outros: TStringField
+      FieldName = 'Acond_Outros'
+      Size = 45
+    end
+    object sqlManuBDProcedencia_Outros: TStringField
+      FieldName = 'Procedencia_Outros'
+      Size = 45
+    end
+    object sqlManuBDTratDisp_Outros: TStringField
+      FieldName = 'TratDisp_Outros'
+      Size = 45
+    end
   end
   object cdsResiduo: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspResiduo'
-    Left = 362
-    Top = 489
+    Left = 818
+    Top = 89
+    object cdsResiduoID_Residuo: TIntegerField
+      FieldName = 'ID_Residuo'
+      Required = True
+    end
+    object cdsResiduoDescricao: TStringField
+      FieldName = 'Descricao'
+      Required = True
+      Size = 50
+    end
+    object cdsResiduoFlagContaminado: TStringField
+      FieldName = 'FlagContaminado'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsResiduoValorMercado: TFMTBCDField
+      FieldName = 'ValorMercado'
+      Precision = 14
+      Size = 2
+    end
+    object cdsResiduoCodigo: TStringField
+      FieldName = 'Codigo'
+      Required = True
+      Size = 4
+    end
   end
   object dtsResiduo: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsResiduo
-    Left = 390
-    Top = 489
+    Left = 846
+    Top = 89
   end
   object cdsEstadoFisico: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspEstadoFisico'
-    Left = 362
-    Top = 517
+    Left = 818
+    Top = 134
   end
   object dtsEstadoFisico: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsEstadoFisico
-    Left = 390
-    Top = 517
+    Left = 846
+    Top = 134
   end
   object cdsAcond: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspAcond'
-    Left = 362
-    Top = 553
+    Left = 818
+    Top = 178
   end
   object dtsAcond: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsAcond
-    Left = 390
-    Top = 545
+    Left = 846
+    Top = 178
   end
   object cdsOrigem: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspOrigem'
-    Left = 506
-    Top = 490
+    Left = 818
+    Top = 222
   end
   object dtsOrigem: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsOrigem
-    Left = 534
-    Top = 490
+    Left = 846
+    Top = 222
   end
   object cdsProcedencia: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspProcedencia'
-    Left = 506
-    Top = 518
+    Left = 818
+    Top = 267
   end
   object dtsProcedencia: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsProcedencia
-    Left = 534
-    Top = 518
+    Left = 846
+    Top = 267
   end
   object cdsTratDisp: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspTratDisp'
-    Left = 506
-    Top = 554
+    Left = 818
+    Top = 310
   end
   object dtsTratDisp: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsTratDisp
-    Left = 534
-    Top = 546
+    Left = 846
+    Top = 310
   end
   object cdsUnidadeMedida: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUnidadeMedida'
-    Left = 204
-    Top = 521
+    Left = 652
+    Top = 313
   end
   object dtsUnidadeMedida: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsUnidadeMedida
-    Left = 232
-    Top = 521
+    Left = 680
+    Top = 313
   end
   object cdsStatus: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspStatus'
-    Left = 203
-    Top = 564
+    Left = 651
+    Top = 356
   end
   object dtsStatus: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsStatus
-    Left = 231
-    Top = 564
+    Left = 679
+    Top = 356
   end
   object cdsGerEmpresa: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspGerEmpresa'
-    Left = 91
-    Top = 387
+    Left = 819
+    Top = 439
     object cdsGerEmpresaID_Empresa: TIntegerField
       FieldName = 'ID_Empresa'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -3721,15 +3825,16 @@ inherited frmCadManifesto: TfrmCadManifesto
   object dtsGerEmpresa: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsGerEmpresa
-    Left = 119
-    Top = 387
+    Left = 847
+    Top = 439
   end
   object cdsTransEmpresa: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspTransEmpresa'
-    Left = 92
-    Top = 521
+    Left = 652
+    Top = 134
     object cdsTransEmpresaID_Empresa: TIntegerField
       FieldName = 'ID_Empresa'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -3808,15 +3913,16 @@ inherited frmCadManifesto: TfrmCadManifesto
   object dtsTransEmpresa: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsTransEmpresa
-    Left = 120
-    Top = 521
+    Left = 680
+    Top = 134
   end
   object cdsGerResponsavel: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspGerResponsavel'
-    Left = 91
-    Top = 431
+    Left = 824
+    Top = 396
     object cdsGerResponsavelID_Responsavel: TIntegerField
       FieldName = 'ID_Responsavel'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -3848,28 +3954,30 @@ inherited frmCadManifesto: TfrmCadManifesto
   object dtsGerResponsavel: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsGerResponsavel
-    Left = 119
-    Top = 431
+    Left = 852
+    Top = 396
   end
   object cdsGerCargo: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspGerCargo'
-    Left = 92
-    Top = 477
+    Left = 821
+    Top = 353
   end
   object dtsGerCargo: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsGerCargo
-    Left = 120
-    Top = 477
+    Left = 849
+    Top = 353
   end
   object cdsTransResponsavel: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspTransResponsavel'
-    Left = 91
-    Top = 564
+    Left = 651
+    Top = 89
     object cdsTransResponsavelID_Responsavel: TIntegerField
       FieldName = 'ID_Responsavel'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -3899,30 +4007,32 @@ inherited frmCadManifesto: TfrmCadManifesto
     end
   end
   object cdsTransCargo: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspTransCargo'
-    Left = 355
-    Top = 384
+    Left = 819
+    Top = 482
   end
   object dtsTransCargo: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsTransCargo
-    Left = 383
-    Top = 384
+    Left = 847
+    Top = 482
   end
   object dtsTransResponsavel: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsTransResponsavel
-    Left = 119
-    Top = 564
+    Left = 679
+    Top = 89
   end
   object cdsRecepEmpresa: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspRecepEmpresa'
-    Left = 203
-    Top = 388
+    Left = 651
+    Top = 268
     object cdsRecepEmpresaID_Empresa: TIntegerField
       FieldName = 'ID_Empresa'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -4001,15 +4111,16 @@ inherited frmCadManifesto: TfrmCadManifesto
   object dtsRecepEmpresa: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsRecepEmpresa
-    Left = 231
-    Top = 388
+    Left = 679
+    Top = 268
   end
   object cdsRecepResponsavel: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspRecepResponsavel'
-    Left = 203
-    Top = 432
+    Left = 651
+    Top = 224
     object cdsRecepResponsavelID_Responsavel: TIntegerField
       FieldName = 'ID_Responsavel'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -4041,54 +4152,56 @@ inherited frmCadManifesto: TfrmCadManifesto
   object dtsRecepResponsavel: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsRecepResponsavel
-    Left = 231
-    Top = 432
+    Left = 679
+    Top = 224
   end
   object cdsRecepCargo: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspRecepCargo'
-    Left = 204
-    Top = 477
+    Left = 652
+    Top = 178
   end
   object dtsRecepCargo: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsRecepCargo
-    Left = 232
-    Top = 477
+    Left = 680
+    Top = 178
   end
   object cdsSituacao: TClientDataSetUrb
     Aggregates = <>
     Params = <>
     ProviderName = 'dspSituacao'
-    Left = 356
+    Left = 100
     Top = 435
   end
   object dtsSituacao: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsSituacao
-    Left = 384
+    Left = 128
     Top = 435
   end
   object cdsSituacaoDesc: TClientDataSetUrb
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspSituacaoDesc'
-    Left = 467
-    Top = 384
+    Left = 651
+    Top = 400
   end
   object dtsSituacaoDesc: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsSituacaoDesc
-    Left = 495
-    Top = 384
+    Left = 679
+    Top = 400
   end
   object cdsGerarNumNegativo: TClientDataSetUrb
     Aggregates = <>
     Params = <>
     ProviderName = 'dspGerarNumNegativo'
-    Left = 665
-    Top = 466
+    Left = 97
+    Top = 386
     object cdsGerarNumNegativovalor: TIntegerField
       FieldName = 'valor'
       DisplayFormat = '000000;XXXXXX'
@@ -4097,8 +4210,8 @@ inherited frmCadManifesto: TfrmCadManifesto
   object dtsGerarNumNegativo: TDataSourceUrb
     AutoEdit = False
     DataSet = cdsGerarNumNegativo
-    Left = 693
-    Top = 466
+    Left = 125
+    Top = 386
   end
   object sqlSituacao: TSQLDataSet
     GetMetadata = False
@@ -4106,195 +4219,231 @@ inherited frmCadManifesto: TfrmCadManifesto
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 300
+    Left = 44
     Top = 435
   end
   object dspSituacao: TDataSetProviderUrb
     DataSet = sqlSituacao
     Options = [poAllowCommandText]
-    Left = 328
+    Left = 72
     Top = 435
   end
   object sqlResiduo: TSQLDataSet
+    SchemaName = 'andre'
     GetMetadata = False
+    CommandText = 
+      'select ID_Residuo, Descricao, FlagContaminado, ValorMercado, Cod' +
+      'igo from residuo order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 306
-    Top = 489
+    Left = 762
+    Top = 89
   end
   object dspResiduo: TDataSetProviderUrb
     DataSet = sqlResiduo
     Options = [poAllowCommandText]
-    Left = 334
-    Top = 489
+    Left = 790
+    Top = 89
   end
   object sqlEstadoFisico: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_EstadoFisico, Descricao from estadofisico order by Des' +
+      'cricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 306
-    Top = 517
+    Left = 762
+    Top = 134
   end
   object dspEstadoFisico: TDataSetProviderUrb
     DataSet = sqlEstadoFisico
     Options = [poAllowCommandText]
-    Left = 334
-    Top = 517
+    Left = 790
+    Top = 134
   end
   object sqlAcond: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_Acondicionamento, Descricao from acondicionamento orde' +
+      'r by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 306
-    Top = 545
+    Left = 762
+    Top = 178
   end
   object dspAcond: TDataSetProviderUrb
     DataSet = sqlAcond
     Options = [poAllowCommandText]
-    Left = 334
-    Top = 545
+    Left = 790
+    Top = 178
   end
   object sqlOrigem: TSQLDataSet
     GetMetadata = False
+    CommandText = 'select ID_Origem, Descricao from origem order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 450
-    Top = 490
+    Left = 762
+    Top = 222
   end
   object dspOrigem: TDataSetProviderUrb
     DataSet = sqlOrigem
     Options = [poAllowCommandText]
-    Left = 478
-    Top = 490
+    Left = 790
+    Top = 222
   end
   object sqlProcedencia: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_Procedencia, Descricao from procedencia order by Descr' +
+      'icao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 450
-    Top = 518
+    Left = 762
+    Top = 267
   end
   object dspProcedencia: TDataSetProviderUrb
     DataSet = sqlProcedencia
     Options = [poAllowCommandText]
-    Left = 478
-    Top = 518
+    Left = 790
+    Top = 267
   end
   object sqlTratDisp: TSQLDataSet
     GetMetadata = False
+    CommandText = 'select ID_TratDisp, Descricao from tratdisp order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 450
-    Top = 546
+    Left = 762
+    Top = 310
   end
   object dspTratDisp: TDataSetProviderUrb
     DataSet = sqlTratDisp
     Options = [poAllowCommandText]
-    Left = 478
-    Top = 546
+    Left = 790
+    Top = 310
   end
   object sqlGerEmpresa: TSQLDataSet
+    SchemaName = 'andre'
     GetMetadata = False
+    CommandText = 
+      'select ID_Empresa, RazaoSocial, ID_Classificacao, Endereco, Muni' +
+      'cipio, UF, Telefone,'#13#10'NumLicencaFEEMA, ValorContrato, ValorTonel' +
+      'ada, FlagRelContaminado, FlagRelReciclavel,'#13#10'FlagRelSucata, Tipo' +
+      'ResumoGeral, Responsavel, ID_Fantasia, CEP, CNPJ, InscEstado, Ob' +
+      's'#13#10'from empresa order by RazaoSocial'
     DbxCommandType = 'Dbx.SQL'
-    MaxBlobSize = -1
+    MaxBlobSize = 1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 37
-    Top = 387
+    Left = 765
+    Top = 439
   end
   object dspGerEmpresa: TDataSetProviderUrb
     DataSet = sqlGerEmpresa
     Options = [poAllowCommandText]
-    Left = 63
-    Top = 387
+    Left = 791
+    Top = 439
   end
   object sqlGerResponsavel: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_Responsavel, Nome, ID_Cargo, ID_Tratamento from respon' +
+      'savel order by Nome'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 35
-    Top = 431
+    Left = 768
+    Top = 396
   end
   object dspGerResponsavel: TDataSetProviderUrb
     DataSet = sqlGerResponsavel
     Options = [poAllowCommandText]
-    Left = 65
-    Top = 431
+    Left = 798
+    Top = 396
   end
   object sqlGerCargo: TSQLDataSet
     GetMetadata = False
+    CommandText = 'select ID_Cargo, Descricao from cargo order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 36
-    Top = 477
+    Left = 765
+    Top = 353
   end
   object dspGerCargo: TDataSetProviderUrb
     DataSet = sqlGerCargo
     Options = [poAllowCommandText]
-    Left = 64
-    Top = 477
+    Left = 793
+    Top = 353
   end
   object sqlTransEmpresa: TSQLDataSet
     SchemaName = 'andre'
     GetMetadata = False
+    CommandText = 
+      'select ID_Empresa, RazaoSocial, ID_Classificacao, Endereco, Muni' +
+      'cipio, UF, Telefone,'#13#10'NumLicencaFEEMA, ValorContrato, ValorTonel' +
+      'ada, FlagRelContaminado, FlagRelReciclavel,'#13#10'FlagRelSucata, Tipo' +
+      'ResumoGeral, Responsavel, ID_Fantasia, CEP, CNPJ, InscEstado, Ob' +
+      's'#13#10'from empresa order by RazaoSocial'
     DbxCommandType = 'Dbx.SQL'
-    MaxBlobSize = -1
+    MaxBlobSize = 1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 36
-    Top = 521
+    Left = 596
+    Top = 134
   end
   object dspTransEmpresa: TDataSetProviderUrb
     DataSet = sqlTransEmpresa
     Options = [poAllowCommandText]
-    Left = 64
-    Top = 521
+    Left = 624
+    Top = 134
   end
   object sqlTransResponsavel: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_Responsavel, Nome, ID_Cargo, ID_Tratamento from respon' +
+      'savel order by Nome'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 35
-    Top = 564
+    Left = 595
+    Top = 89
   end
   object dspTransResponsavel: TDataSetProviderUrb
     DataSet = sqlTransResponsavel
     Options = [poAllowCommandText]
-    Left = 63
-    Top = 564
+    Left = 623
+    Top = 89
   end
   object sqlTransCargo: TSQLDataSet
     GetMetadata = False
+    CommandText = 'select ID_Cargo, Descricao from cargo order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 299
-    Top = 384
+    Left = 763
+    Top = 482
   end
   object dspTransCargo: TDataSetProviderUrb
     DataSet = sqlTransCargo
     Options = [poAllowCommandText]
-    Left = 327
-    Top = 384
+    Left = 791
+    Top = 482
   end
   object sqlGerarNumNegativo: TSQLDataSet
     GetMetadata = False
@@ -4302,105 +4451,122 @@ inherited frmCadManifesto: TfrmCadManifesto
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 609
-    Top = 466
+    Left = 41
+    Top = 386
   end
   object dspGerarNumNegativo: TDataSetProviderUrb
     DataSet = sqlGerarNumNegativo
     Options = [poAllowCommandText]
-    Left = 637
-    Top = 466
+    Left = 69
+    Top = 386
   end
   object sqlRecepEmpresa: TSQLDataSet
+    SchemaName = 'andre'
     GetMetadata = False
-    CommandText = 'select * from empresa'
+    CommandText = 
+      'select ID_Empresa, RazaoSocial, ID_Classificacao, Endereco, Muni' +
+      'cipio, UF, Telefone,'#13#10'NumLicencaFEEMA, ValorContrato, ValorTonel' +
+      'ada, FlagRelContaminado, FlagRelReciclavel,'#13#10'FlagRelSucata, Tipo' +
+      'ResumoGeral, Responsavel, ID_Fantasia, CEP, CNPJ, InscEstado, Ob' +
+      's'#13#10'from empresa order by RazaoSocial'
     DbxCommandType = 'Dbx.SQL'
-    MaxBlobSize = -1
+    MaxBlobSize = 1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 147
-    Top = 388
+    Left = 595
+    Top = 268
   end
   object dspRecepEmpresa: TDataSetProviderUrb
     DataSet = sqlRecepEmpresa
     Options = [poAllowCommandText]
-    Left = 175
-    Top = 388
+    Left = 623
+    Top = 268
   end
   object dspRecepResponsavel: TDataSetProviderUrb
     DataSet = sqlRecepResponsavel
     Options = [poAllowCommandText]
-    Left = 175
-    Top = 432
+    Left = 623
+    Top = 224
   end
   object sqlRecepResponsavel: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_Responsavel, Nome, ID_Cargo, ID_Tratamento from respon' +
+      'savel order by Nome'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 147
-    Top = 432
+    Left = 595
+    Top = 224
   end
   object dspRecepCargo: TDataSetProviderUrb
     DataSet = sqlRecepCargo
     Options = [poAllowCommandText]
-    Left = 176
-    Top = 477
+    Left = 624
+    Top = 178
   end
   object sqlRecepCargo: TSQLDataSet
     GetMetadata = False
+    CommandText = 'select ID_Cargo, Descricao from cargo order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 148
-    Top = 477
+    Left = 596
+    Top = 178
   end
   object dspUnidadeMedida: TDataSetProviderUrb
     DataSet = sqlUnidadeMedida
     Options = [poAllowCommandText]
-    Left = 176
-    Top = 521
+    Left = 624
+    Top = 313
   end
   object sqlUnidadeMedida: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_UnidadeMedida, Descricao, Sigla from unidademedida ord' +
+      'er by Sigla'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 148
-    Top = 521
+    Left = 596
+    Top = 313
   end
   object dspStatus: TDataSetProviderUrb
     DataSet = sqlStatus
     Options = [poAllowCommandText]
-    Left = 175
-    Top = 564
+    Left = 623
+    Top = 356
   end
   object sqlStatus: TSQLDataSet
     GetMetadata = False
+    CommandText = 
+      'select ID_ManifestoEstado, Descricao from manifestoestado order ' +
+      'by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 147
-    Top = 564
+    Left = 595
+    Top = 356
   end
   object dspSituacaoDesc: TDataSetProviderUrb
     DataSet = sqlSituacaoDesc
     Options = [poAllowCommandText]
-    Left = 439
-    Top = 384
+    Left = 623
+    Top = 400
   end
   object sqlSituacaoDesc: TSQLDataSet
     GetMetadata = False
+    CommandText = 'select ID_Situacao, Descricao from situacao order by Descricao'
     DbxCommandType = 'Dbx.SQL'
     MaxBlobSize = -1
     Params = <>
     SQLConnection = frmPrincipal.ConexaoBD
-    Left = 411
-    Top = 384
+    Left = 595
+    Top = 400
   end
   object rdtsCadManifesto: TRvDataSetConnection
     RuntimeVisibility = rtDeveloper

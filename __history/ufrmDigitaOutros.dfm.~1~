@@ -1,0 +1,30 @@
+inherited frmDigitaOutros: TfrmDigitaOutros
+  Caption = 'Outra Origem'
+  ClientHeight = 105
+  ClientWidth = 282
+  ExplicitWidth = 298
+  ExplicitHeight = 143
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblOutros: TLabel
+    Left = 16
+    Top = 34
+    Width = 92
+    Height = 13
+    Caption = 'Digite Outra Origem'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object txtOutros: TEdit
+    Left = 16
+    Top = 49
+    Width = 250
+    Height = 21
+    TabOrder = 0
+    Text = 'txtOutros'
+  end
+end
